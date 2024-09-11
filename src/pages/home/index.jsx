@@ -1,20 +1,28 @@
 import React from 'react';
 import styles from "./styles.module.css";
-
-import foto from "../../assets/emConstrucao.jpg"
-
+import Carousel from '../../componentes/carrosell1/Carousel';
+import Carousel1 from '../../componentes/carrossel2/Carousel1';
+import foto from "../../assets/manutencao.jpg"
+import desktop from '../../assets/manutencao-Desktop.jpg'
+import mobile from '../../assets/manutencao-Mobile.jpg'
 
 
 
 const Home = () => {
   
-   
-
-
   return (
+    
     <div className={styles.body} id='inicio'>
-        <img className={styles.foto} src={foto} alt="Logo" />
+       
+      <div className={styles.desktopOnly}>
+      <img className={styles.foto} src={desktop} alt="Logo" />
+      </div>
+      <div className={styles.mobileOnly}>
+      <img className={styles.foto} src={mobile} alt="Logo" />
+      </div>
+
     </div>
+
   );
 };
 

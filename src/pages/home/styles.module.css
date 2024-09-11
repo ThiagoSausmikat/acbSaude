@@ -8,19 +8,27 @@
 .foto {
     width: 100%;
     height: auto;
+    
 }
 
 
-@media screen and (max-width: 900px) {
-    .foto {
-        width: 70%;
-        height: auto;  
+
+
+
+.desktopOnly {
+    display: block;
+  }
+  
+  .mobileOnly {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktopOnly {
+      display: none;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .foto {
-        width: 100%;
-        height: auto;  
+  
+    .mobileOnly {
+      display: block;
     }
-}
+  }
