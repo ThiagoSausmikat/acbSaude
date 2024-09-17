@@ -1,0 +1,147 @@
+.carouselContainer {
+  position: relative;
+  width: auto; /* Ajusta o carrossel para ocupar 100% da largura do contêiner pai */
+  margin: 0 ;
+  padding: 0;
+  overflow: hidden; /* Garante que o conteúdo não saia da área visível */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ajusta a largura dos slides para 100% */
+}
+
+.slide {
+  min-width: 100%; /* Garante que cada slide ocupe 100% da largura do carrossel */
+  box-sizing: border-box;
+  position: relative; /* Necessário para posicionar o conteúdo sobreposto */
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Ajusta a altura da imagem para preencher o slide */
+  object-fit: cover; /* Ajusta a imagem para cobrir o slide mantendo a proporção */
+  display: block; /* Remove qualquer espaço extra abaixo da imagem */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 30vh; /* Define uma margem à esquerda */
+  transform: translateY(-50%); /* Ajusta para o centro vertical */
+  
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  /* Remova o max-width se você quiser que a largura se ajuste ao conteúdo */
+  max-width: none; /* Remove o limite de largura */
+  width: auto; /* Ajusta a largura automaticamente */
+  height: auto; /* Ajusta a altura automaticamente */
+  box-sizing: border-box; /* Inclui o padding na largura e altura totais */
+  text-align: left;
+}
+
+.overlay button {
+  font-size: 23px;
+  padding: 0;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: #CDBA72;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-weight: 800;
+}
+
+.titulo{
+  text-align: left;
+  font-size: 55px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 800;
+  
+}
+
+.texto {
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 30px;
+  white-space: pre-line; /* Preserva quebras de linha e espaços adicionais */
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none; /* Remove qualquer fundo padrão */
+  color: #B7AD6F; /* Cor do ícone */
+  border: none;
+  font-size: 30px; /* Ajusta o tamanho do ícone */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%; /* Torna o botão circular */
+  z-index: 1; /* Garante que as setas estejam sobre outros elementos */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Adiciona sombra contornada */
+  font-size: 80px; /* Ajusta o tamanho do ícone */
+}
+
+.prev {
+  left: 10px; /* Posiciona a seta à esquerda */
+}
+
+.next {
+  right: 10px; /* Posiciona a seta à direita */
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px; /* Alinha os dots na parte inferior do carrossel */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  display: flex;
+  justify-content: center; /* Centraliza os dots horizontalmente */
+  width: 100%; /* Garante que os dots estejam dentro da largura do carrossel */
+}
+
+.dot {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #B7AD6F;
+}
+
+@media screen and (max-width: 1400px) {
+   
+  .slides {
+    height: 700px;
+    width: 100%; /* Ajusta a largura dos slides para 100% */
+  }
+  
+  
+  
+}
+
+@media screen and (max-width: 1100px) {
+   
+  .slides {
+    height: 700px;
+    width: 100%; /* Ajusta a largura dos slides para 100% */
+  }
+  
+  
+  
+}
+
+

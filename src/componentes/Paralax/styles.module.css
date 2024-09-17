@@ -1,0 +1,58 @@
+
+
+.parallaxContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallaxContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(9, 75, 89, 0.5); /* Ajuste a cor e a opacidade conforme necessário */
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Ajuste a altura conforme necessário */
+    margin-left: 30vh;
+    margin-right: 30vh;
+}
+
+.titulo {
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800; /* Ajuste conforme necessário */
+}
+
+.subTitulo {
+    font-size: 28px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600; /* Ajuste conforme necessário */
+    margin-top: -10px;
+}
+
+.paragrafo {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450; /* Ajuste conforme necessário */
+    
+}
+
+@media screen and (max-width: 450px) {
+    .content { 
+        min-height: 30vh; /* Ajuste a altura conforme necessário */
+    }
+}

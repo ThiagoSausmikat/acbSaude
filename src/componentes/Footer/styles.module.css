@@ -1,0 +1,89 @@
+.conteiner {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding-top: 65px;
+    padding-bottom: 30px;
+    background-color: #094B59;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center;
+    box-shadow: inset 0px 20px 50px rgb(0, 0, 0); /*Sombra*/
+    justify-content: space-between;
+  }
+  
+  .conteinercontent1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .conteinercontent2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+
+ .content {
+    padding: 50px;
+ } 
+
+  .subTitutlo3 {
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500; /* Ajuste conforme necessário */
+  }
+
+  .subTitutlo4 {
+    font-size: 13.5px;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500; /* Ajuste conforme necessário */
+  }
+
+  .link {
+    font-size: 13.5px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500; /* Ajuste conforme necessário */
+  }
+
+
+  .paragrafo {
+    font-size: 15px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300; /* Ajuste conforme necessário */
+  }
+
+
+  .icon {
+    display: flex; /* Usa flexbox para alinhar ícones em linha */
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 10px; /* Espaçamento acima dos ícones, opcional */
+    color: #fff;
+  }
+
+.iconContente {
+    width: 5.5vh;
+    height: auto;
+    cursor: pointer;
+    
+}
+
+.iconContente:hover {
+    color: #CDBA72;
+    transform: rotate(15deg); /* Rotaciona o ícone em 15 graus */
+  }
+  
+

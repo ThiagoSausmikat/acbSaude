@@ -1,0 +1,130 @@
+.conteiner {
+    display: flex;
+    height: auto;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    background-color: #ffffff;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center;
+    box-shadow: inset 0px 20px 50px rgb(0, 0, 0); /*Sombra*/
+  }
+  
+  .conteinercontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 12vh;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .titulo {
+    font-size: 50px;
+    color: #094B59;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+  }
+  
+  .subTitulo {
+    font-size: 28px;
+    text-align: left; /* Ou use 'start' se você preferir o alinhamento baseado na direção do texto */
+    margin-left: 15vh;
+    margin-right: 10vh;
+    margin-top: 15px;
+    color: #094B59;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600; 
+  }
+  
+  .paragrafo1 {
+    text-align: left; /* Ou use 'start' se você preferir o alinhamento baseado na direção do texto */
+    margin: 0; /* Remove a margem padrão */
+    margin-left: 15vh;
+    margin-right: 10vh;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+  
+  }
+
+  .paragrafo2 {
+    text-align: left; /* Ou use 'start' se você preferir o alinhamento baseado na direção do texto */
+    margin: 0; /* Remove a margem padrão */
+    margin-left: 15vh;
+    margin-right: 10vh;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-top: -0.5px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+  
+  }
+  
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantém o alinhamento dos itens no início do contêiner */
+    align-items: flex-start; /* Alinha os itens ao início do contêiner, ou seja, à esquerda */
+  }
+  
+  .roundedRectangle {
+    width: 105vh; /* Ajuste com base na viewport width */
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px; /* Arredondamento dos cantos */
+    margin-left: auto; /* Empurra a barra para a direita */
+    padding-right: 200px; /* Espaço extra à esquerda */
+  }
+  
+  .coracao {
+      width: 70vh;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-left: 20vh;
+      
+  }
+  
+  .logo {
+    width: 25%;
+    height: auto;
+    
+  }
+  
+  
+  @media screen and (max-width: 1400px) {
+    .content1 {
+      margin-left: 12vh;
+    }
+  
+    .subTitulo {
+      margin-left: 12vh;
+    }
+  
+    .paragrafo {
+      margin-left: 12vh;
+    }
+  
+    .roundedRectangle {
+      width: 90vh; /* Ajuste com base na viewport width */
+      padding-right: 100px; /* Espaço extra à esquerda */
+    }
+    .coracao {
+      height: auto;
+      margin-left: 10vh;
+    }
+    
+  }
+  
