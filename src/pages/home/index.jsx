@@ -21,18 +21,7 @@ const Home = () => {
   return (
     
     <div className={styles.body} id='inicio'>
-      
-      <Navbar />
-      
-      <Carousel1 />
-      
-      <Sessao1 />
-
-      <ParallaxSection />
-
-      <Sessao2 />
      
-     <Footer />
 
      <div className={styles.desktopOnly}>
       <img className={styles.foto} src={desktop} alt="Logo" />
