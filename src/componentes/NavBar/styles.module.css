@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -12,18 +11,23 @@ ul {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 10; /* Garantir que a navbar esteja acima de outros conteúdos */
+    background-color: rgba(9, 75, 89, 1); /* Cor sólida no início */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 20px; /* Adiciona algum espaçamento lateral */
-    position: fixed;
-    top: 0; /* Garantir que esteja no topo */
-    left: 0; /* Garantir que esteja à esquerda */
-    height: 90px;
-    z-index: 10; /* Aumente o z-index para garantir que o navbar esteja acima */
-    transition: 0.3s ease-in;
-    background-color: rgba(9, 75, 89, 0.8); /* Ajuste a cor e a opacidade conforme necessário */
+    padding: 0 20px;
+    transition: background-color 0.3s ease-in; /* Transição suave para a cor de fundo */
+}
+
+/* Quando a página é rolada, a navbar usa uma cor transparente */
+.navbar.scrolled {
+    background-color: rgba(9, 75, 89, 0.8); /* Cor transparente */
 }
 
 .contentLogo {
@@ -38,17 +42,16 @@ ul {
 .logo {
     width: 120px;
     height: auto;
-  }
+}
 
-  .navItem {
+.navItem {
     color: #ffffff;
     font-size: 1.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    padding: 5px 20px; /* Espaço interno inicial */
+    padding: 5px 8px;
     border-radius: 30px;
-    position: relative; /* Necessário para o pseudo-elemento */
-    
+    position: relative;
 }
 
 .navbar, .navItem, .contentLogo {
@@ -59,16 +62,18 @@ ul {
 .navItem:hover {
     background-color: #CDBA72;
     color: #fff;
-    transform: scale(1.05); /* Aumenta o tamanho do item de menu */
+    transform: scale(1.05);
 }
 
+.link {
+    color: #fff;
+    text-decoration: none;
+}
 
-/* Menu Hambúrguer à direita */
 .hamburger {
     display: none;
     cursor: pointer;
     z-index: 10;
-    /* Garantir visibilidade com um fundo claro */
     background-color: rgba(0,0,0,.9);
     border-radius: 5px;
     padding: 10px;
@@ -83,15 +88,13 @@ ul {
     transition: 0.4s;
 }
 
-/* Menu de Navegação */
 .navMenu {
     display: flex;
-    gap: 40px; /* Adiciona espaçamento entre os itens */
+    gap: 40px;
     color: #ffffff;
     margin-right: 7rem;
 }
 
-/* Menu Mobile */
 .navMenu.active {
     display: flex;
     flex-direction: column;
@@ -106,21 +109,20 @@ ul {
 }
 
 @media screen and (max-width: 800px) {
-
     .navbar {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10px; /* Ajuste o espaçamento lateral conforme necessário */
+        padding: 0 10px;
         width: 100%;
     }
 
     .nome {
-        margin-right: auto; /* Nome sempre à esquerda */
+        margin-right: auto;
     }
 
     .navMenu {
-        display: none; /* Inicialmente oculto */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -130,7 +132,7 @@ ul {
         background-color: rgba(0,0,0,.9);
         height: 90vh;
         transition: .3s;
-        padding: 20px; 
+        padding: 20px;
     }
 
     .navMenu.active {
@@ -145,25 +147,23 @@ ul {
 }
 
 @media screen and (max-width: 430px) {
-   
-    /* Assegura que o menu hambúrguer esteja visível e alinhado à direita */
     .navbar {
-        padding: 0 10px; /* Ajuste o espaçamento lateral conforme necessário */
+        padding: 0 10px;
     }
 
     .hamburger {
-        display: block; /* Sempre visível em telas pequenas */
+        display: block;
         margin-right: 3rem;
-        
     }
 
     .nome {
-        margin-right: auto; /* Nome sempre à esquerda */
+        margin-right: auto;
         font-size: 1.5rem;
         margin-left: 2rem;
     }
+
     .navMenu {
-        display: none; /* Inicialmente oculto */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -172,7 +172,7 @@ ul {
         left: -100%;
         background-color: rgba(0,0,0,.9);
         height: 90vh;
-        transition: .3s;        
+        transition: .3s;
     }
 
     .navMenu.active {

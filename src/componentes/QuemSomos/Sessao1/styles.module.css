@@ -1,0 +1,99 @@
+  .conteinercontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza o conteúdo */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 0 300px;
+    /* Margem nas laterais */
+
+  }
+
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centraliza o texto */
+  }
+
+
+  .titulo {
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .roundedRectangle {
+    width: 50vh;
+    /* Ajuste com base na viewport width */
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    /* Arredondamento dos cantos */
+    margin: 5px 0px 30px 0px;
+    /* Espaço acima e abaixo do retângulo */
+  }
+
+  .content2LogoTxt {
+    display: flex;
+    flex-direction: row;
+    /* Alinha o logo e o texto verticalmente */
+    align-items: center;
+    /* Centraliza os itens */
+    gap: 20px;
+    /* Espaço entre o logo e o parágrafo */
+    margin-top: 20px;
+    padding: 0 20px;
+    /* Margem nas laterais */
+    width: 100%;
+    /* Ajusta para a largura total do contêiner */
+  }
+
+  .logo {
+    width: 35vh;
+    height: auto;
+    margin-bottom: 10px;
+    /* Espaço abaixo da imagem do logo */
+  }
+
+
+  .paragrafo1 {
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+    color: #fff;
+  }
+
+
+
+
+
+  @media screen and (max-width: 1400px) {
+    .conteinercontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Centraliza o conteúdo */
+      text-align: center;
+      /* Centraliza o texto */
+      padding: 0 100px;
+      /* Margem nas laterais */
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    .conteinercontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Centraliza o conteúdo */
+      text-align: center;
+      /* Centraliza o texto */
+      padding: 0 100px;
+      /* Margem nas laterais */
+    }
+  }

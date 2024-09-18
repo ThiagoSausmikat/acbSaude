@@ -1,0 +1,112 @@
+.conteinercontent {
+    background-color: #094B59;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: auto; /* Ou use '100vh' para a altura total da tela */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ajusta largura das mãos*/
+    height: auto;
+    position: relative;
+}
+
+.conteinerEsq, .conteinerDir {
+    position: relative;
+    width: auto;
+    height: 80vh; /* Ajusta altura das mãos junto com o top ou button la em baixo  */
+}
+
+.tituloBarra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo principal esteja acima das imagens */
+}
+
+.roundedRectangle {
+    width: 80vh;
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    margin-left: auto; /* Empurra a barra para a direita */
+    padding-right: 200px; /* Espaço extra à esquerda */
+}
+
+.maoEsq, .maoDir {
+    position: absolute; /* Permite mover a imagem fora do contêiner principal */
+    width: 50vw; /* tamanho das imagens */
+    height: auto;
+    opacity: 0.3;
+    z-index: 0; /* Garante que as imagens estejam atrás do conteúdo principal */
+}
+
+.maoEsq {
+    left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
+    bottom: 0px;
+}
+
+.maoDir {
+    right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
+    top: 0px;
+}
+
+
+.titulo {
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .conteinerEsq, .conteinerDir {
+        height: 75vh;
+    }
+
+    .maoEsq, .maoDir {
+        width: 50vw;
+    }
+    .roundedRectangle {
+        width: 105vh;
+    }
+}
+
+
+
+
+@keyframes slideIn {
+    to {
+        opacity: 0.3;
+        transform: translateX(0); /* Começa fora da tela à direita */
+    }
+    from {
+        opacity: 0;
+        transform: translateX(20vw); /* Move para a posição inicial */
+    }
+}
+
+.maoDir {
+    position: absolute; /* Permite mover a imagem fora do contêiner principal */
+    width: 50vw; /* Tamanho das imagens */
+    height: auto;
+    opacity: 0;
+    z-index: 0; /* Garante que as imagens estejam atrás do conteúdo principal */
+    animation: slideIn 1s forwards;
+
+}
+

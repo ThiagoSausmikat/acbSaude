@@ -1,0 +1,45 @@
+.conteinercontent {
+    background-color: rgb(255, 255, 255);
+    margin-top: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 400px;
+}
+
+.roundedRectangle {
+    width: 90vh;
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    margin: 5px 0px 30px 0px;
+}
+
+.titulo {
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #094B59;
+}
+
+.paragrafo {
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+    color: #094B59;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+    .content {
+        padding: 0 250px;
+    }
+}
