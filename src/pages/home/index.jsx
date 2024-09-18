@@ -22,14 +22,19 @@ const Home = () => {
     
     <div className={styles.body} id='inicio'>
       
-     
+      <Navbar />
+      
+      <Carousel1 />
+      
+      <Sessao1 />
 
-     <div className={styles.desktopOnly}>
-      <img className={styles.foto} src={desktop} alt="Logo" />
-      </div>
-      <div className={styles.mobileOnly}>
-      <img className={styles.foto} src={mobile} alt="Logo" />
-      </div>
+      <ParallaxSection />
+
+      <Sessao2 />
+     
+     <Footer />
+
+     
 
    
     </div>
