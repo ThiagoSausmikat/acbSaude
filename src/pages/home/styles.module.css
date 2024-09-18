@@ -131,7 +131,11 @@
     }
 }
 
+.foto {
+  width: 100%;
+  height: auto;
 
+}
 
 .desktopOnly {
     display: block;
