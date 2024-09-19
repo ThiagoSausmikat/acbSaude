@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import slide1 from "../../assets/slide1.jpg";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-const Card = () => {
+const CardNovo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const cards = [
@@ -46,4 +46,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardNovo;

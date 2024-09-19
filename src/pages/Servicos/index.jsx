@@ -7,12 +7,10 @@ import Footer from '../../componentes/Footer';
 import banner from '../../assets/servicos.jpg'
 import Sessao1 from '../../componentes/Servicos/Sessao1';
 import Sessao2 from '../../componentes/Servicos/Sessao2';
-import Sessao3 from '../../componentes/Servicos/Sessao3';
-import Card from '../../componentes/card';
-import Card2 from '../../componentes/card1';
-import SlideCard from '../../componentes/MainPage/SlideCard';
-import SliderHome from '../../componentes/MainPage/Slider';
-import CardSlider from '../../componentes/CardSlider';
+import CardNovo from '../../componentes/Card';
+
+
+
 
 
 const Servicos = () => {
@@ -33,9 +31,8 @@ const Servicos = () => {
 
       <Sessao2 />
 
-      <Sessao3 />
+      <CardNovo />
 
-      <Card />
 
   
 
