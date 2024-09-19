@@ -1,0 +1,82 @@
+.conteiner {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding-top: 180px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contentParagrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.conteinercontent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative; /* Para permitir posicionamento absoluto */
+    width: 100%; /* Para garantir que ocupa toda a largura */
+}
+
+.roundedRectangleEsq {
+    width: 80vh; /* Ajuste com base na viewport width */
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+
+    left: -25vh; /* Ajuste conforme necessário para o efeito */
+}
+
+.roundedRectangleDir {
+    width: 80vh; /* Ajuste com base na viewport width */
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+
+    right: -25vh; /* Ajuste conforme necessário para o efeito */
+}
+
+.textoContainer {
+    padding: 0 30px; /* Adiciona espaço nas laterais do texto */
+    text-align: center;
+    z-index: 1; /* Garante que o texto fique acima das barras */
+}
+
+.subTitulo {
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    margin: 5px 0; /* Adiciona espaço acima e abaixo do subtítulo */
+    text-align: center;
+    padding: 0px 20px;
+}
+
+@media screen and (max-width: 420px) {
+    .textoContainer {
+        padding: 0 10px; /* Adiciona espaço nas laterais do texto */
+    }
+
+    .roundedRectangleEsq {
+        width: 80vh; /* Ajuste com base na viewport width */
+        left: -25vh; /* Ajuste conforme necessário para o efeito */
+        display: none;
+    }
+
+    .roundedRectangleDir {
+        width: 80vh; /* Ajuste com base na viewport width */
+        right: -25vh; /* Ajuste conforme necessário para o efeito */
+        display: none;
+    }
+
+    .subTitulo {
+        font-size: 20px;
+
+    }
+}

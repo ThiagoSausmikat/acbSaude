@@ -2,9 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    flex-direction: column;
+    min-height: 95vh;
     padding: 0 35px;
-    background-color: aquamarine;
+    background-color: #094B59;
 }
 
 .wrapper {
@@ -14,27 +15,30 @@
 }
 
 .wrapper .icon {
-    height: 50px;
-    width: 50px;
-    background-color: #fff;
+    /*height: 80px;
+    width: 80px;  tive que tirar a fudno
+    background-color: #fff; */
     text-align: center;
     line-height: 50px;
-    border-radius: 50%;
+    
     cursor: pointer;
     position: absolute;
     top: 50%;
-    font-size: 1.25rem;
+    font-size: 5rem;
     transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7)); /* Sombra suave */
     z-index: 1; /* Coloca as setas acima dos cards */
 }
 
 .wrapper .icon:first-child {
-    left: -35px;
+    left: -80px;
+    color: #CDBA72;
 }
 
 .wrapper .icon:last-child {
-    right: -22px;
+    right: -75px;
+    color: #CDBA72;
+    
 }
 
 .carouselContainer {
@@ -50,32 +54,38 @@
 
 .carousel .card {
     flex: 0 0 calc((100% / 2) - 16px); /* Mostra 2 cards por padrão */
-    height: 342px; /* Altura fixa */
+    height: 300px; /* Altura fixa */
     list-style: none;
     background-color: #fff;
-    border-radius: 8px;
-    display: flex;
-    cursor: pointer;
+    border-radius: 20px;
+    border: 10px solid #CDBA72;
+/*  display: flex; retirei para o circulo fica sempre em cima e naõ desnivelado*/
+
+    padding-top: 20px;
     padding-bottom: 15px;
     align-items: center;
-    justify-content: center;
+    
     flex-direction: column;
-    margin-right: 16px; /* Espaçamento entre os cards */
+    margin-right: 17px; /* Espaçamento entre os cards */
 }
 
-.card .img {
-    background-color: blueviolet;
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /*SE EU COLOCAR CENTER, VAI ALINHAR
+    AO CENTEO POREM VAI FICA UM CIRULO DISNIVELADO*/
+    ;
 }
 
-.card .img img {
-    width: 140px;
-    height: 140px;
+.card .img  {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 80%;
-    border: 4px solid #fff;
+    border: 8px solid #CDBA72;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .card h2 {
@@ -85,9 +95,54 @@
 }
 
 .card span {
-    color: burlywood;
-    font-size: 1.31rem;
+    font-size: 35px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: #094B59;
 }
+
+.tituloBarra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.roundedRectangle1 {
+    width: 95vh;
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.roundedRectangle2 {
+    width: 60vh;
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+.titulo {
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #fff;
+}
+
+
+.subTitulo {
+    font-size: 28px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: #094B59;
+}
+
+
 
 /* Ajustes para telas menores */
 @media screen and (max-width: 900px) {

@@ -5,11 +5,11 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const CardNovo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const cards = [
-    { id: 1, name: 'Blanche Pearson', title: 'Sales Manager', img: slide1 },
-    { id: 2, name: 'John Doe', title: 'Developer', img: slide1 },
-    { id: 3, name: 'Jane Smith', title: 'Designer', img: slide1 },
+    { id: 1, name: 'Gestão do Inicio de Tratamento para o Paciente ', title: '1°' },
+    { id: 2, name: 'Monitoramento dos Sintomas', title: '2°' },
+    { id: 3, name: 'Adesão ao<br />Tratamento', title: '3°'  },
   ];
 
   const cardsToShow = window.innerWidth < 600 ? 1 : 2;
@@ -25,23 +25,31 @@ const CardNovo = () => {
 
   return (
     <div className={styles.body}>
+
+      <div className={styles.tituloBarra}>
+        <h1 className={styles.titulo}>Suporte na Jornada do Tratamento</h1>
+        <div className={styles.roundedRectangle1} />
+      </div>
+
       <div className={styles.wrapper}>
         <IoIosArrowBack className={styles.icon} onClick={prevCard} disabled={currentIndex === 0} />
-        
         <div className={styles.carouselContainer}>
           <ul className={styles.carousel} style={{ transform: `translateX(-${(currentIndex * (100 / cardsToShow))}%)`, transition: 'transform 0.5s ease' }}>
             {cards.map((card) => (
               <li key={card.id} className={styles.card}>
-                <div className={styles.img}><img src={card.img} alt={card.name} /></div>
-                <h2>{card.name}</h2>
-                <span>{card.title}</span>
+                <div className={styles.img}><div className={styles.circulo}><span className={styles.span}>{card.title}</span></div></div>
+                <h2 className={styles.subTitulo} dangerouslySetInnerHTML={{ __html: card.name }} />
+                
               </li>
             ))}
           </ul>
         </div>
-
         <IoIosArrowForward className={styles.icon} onClick={nextCard} disabled={currentIndex === maxIndex} />
       </div>
+<div className={styles.roundedRectangleBody}>
+      <div className={styles.roundedRectangle2} />
+      </div>
+
     </div>
   );
 };

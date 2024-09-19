@@ -13,7 +13,7 @@ const Sessao2 = () => {
             <div className={styles.content}>
                 
                 <div className={styles.tituloBarra}>
-                    <h2 className={styles.subTitulo}>Programa de Suporte ao Paciente</h2>
+                    <h1 className={styles.titulo}>Programa de Suporte ao Paciente</h1>
                     <div className={styles.roundedRectangle} />
                 </div>
 
