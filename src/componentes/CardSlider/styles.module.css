@@ -1,0 +1,131 @@
+.carouselContainer {
+    width: 800px; /* Ajuste para a largura desejada */
+    height: 1180px; /* Altura do contêiner */
+    margin: 0 auto; /* Centraliza o carrossel na página */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura */
+    position: relative; /* Para que as setas possam ser posicionadas absolutamente */
+}
+
+.carousel .react-multi-carousel-list {
+    margin: 0; /* Remover margens para evitar espaçamento */
+}
+
+.carousel .react-multi-carousel-item {
+    display: flex;
+    justify-content: center;
+    flex: none; /* Impede que os itens se expandam */
+}
+
+.carousel .react-multi-carousel-arrow {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    background: #fff; /* Cor de fundo da seta */
+    border: none;
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    z-index: 10; /* Para que a seta fique acima de outros elementos */
+}
+
+.carousel .react-multi-carousel-arrow--left {
+    left: -60px; /* Ajuste a distância da seta esquerda para fora */
+}
+
+.carousel .react-multi-carousel-arrow--right {
+    right: -60px; /* Ajuste a distância da seta direita para fora */
+}
+
+.cardContent {
+    width: auto; /* Ajuste para a largura desejada */
+    height: 250px;
+    background: #fff;
+    border: 10px solid #CDBA72;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px; /* Ajuste a margem lateral para reduzir o espaço entre os cards */
+}
+
+.cardImage {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImageContent {
+    width: 100px; /* Ajuste conforme necessário */
+}
+
+.img {
+    width: 100%; /* Ajuste conforme necessário */
+    border-radius: 10px;
+}
+
+.Content {
+    margin-top: 10px;
+}
+
+.subTitulo {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cardContent {
+        width: 200px; /* Largura menor para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .cardContent {
+        width: auto; /* Largura total para telas pequenas */
+    }
+    .carouselContainer {
+        width: 100%; /* Ajuste para a largura desejada */
+        margin: 0 auto; /* Centraliza o carrossel na página */
+        overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura */
+        position: relative; /* Para que as setas possam ser posicionadas absolutamente */
+    }
+}
+
+/* Para tamanhos intermediários */
+@media (max-width: 850px) {
+    .cardContent {
+        width: auto; /* Largura total para telas pequenas */
+    }
+    .carouselContainer {
+        width: 400px; /* Ajuste para a largura desejada */
+        margin: 0 auto; /* Centraliza o carrossel na página */
+        overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura */
+        position: relative; /* Para que as setas possam ser posicionadas absolutamente */
+    }
+}
+
+.react-multi-carousel-dot {
+    background: #CDBA72; /* Cor do ponto */
+    opacity: 1; /* Opacidade do ponto */
+    border-radius: 50%; /* Formato redondo */
+    width: 10px; /* Largura do ponto */
+    height: 10px; /* Altura do ponto */
+    margin: 0 5px; /* Espaçamento entre os pontos */
+}
+
+.react-multi-carousel-dot--active {
+    background:
+     #FF5733; /* Cor do ponto ativo */
+     background-color: #FF5733;
+    opacity: 1; /* Opacidade do ponto ativo */
+}
+
+@media (max-width: 1025px) {
+    .cardContent {
+        width: auto; /* Largura total para telas pequenas */
+    }
+    .carouselContainer {
+        width: 400px; /* Ajuste para a largura desejada */
+        margin: 0 auto; /* Centraliza o carrossel na página */
+        overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura */
+        position: relative; /* Para que as setas possam ser posicionadas absolutamente */
+    }
+}

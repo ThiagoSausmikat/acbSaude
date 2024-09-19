@@ -1,0 +1,73 @@
+.conteinercontent {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    height: auto; /* Ou use '100vh' para a altura total da tela */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ajusta largura das mãos*/
+    height: auto;
+}
+
+.tituloBarra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.roundedRectangle {
+    width: 90vh;
+    height: 1vh;
+    background-color: #CDBA72;
+    border-radius: 20px;
+    margin: 5px 0px 30px 0px;
+  }
+
+  .conteiner1 {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    width: 40vw;
+    margin-bottom: 50px;
+}
+
+.retangulo {
+    padding: 50px;             /* Espaçamento interno */
+    border-radius: 10px;       /* Bordas arredondadas */
+    overflow: hidden;          /* Para esconder o excesso de texto, se necessário */
+    background-color: #094B59
+}
+
+.conteiner2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;
+    width: 80vw;
+}
+
+.subTitulo {
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    color: #094B59;
+}
+
+.paragrafo {
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+    color: #fff;
+}

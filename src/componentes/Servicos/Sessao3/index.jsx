@@ -3,38 +3,31 @@ import styles from "./styles.module.css";
 
 import maoDir from "../../../assets/maoDir.png"
 import maoEsq from "../../../assets/maoEsq.png"
+import CardSlider from '../../CardSlider';
 
 
-const Sessao1 = () => {
+
+const Sessao3 = () => {
 
     return (
 
         <section className={styles.conteinercontent}>
             <div className={styles.content}>
                 
-                <div className={styles.conteinerEsq}>
-                    <img src={maoEsq} className={styles.maoEsq} alt="Logo" />
-                </div>
-
                 <div className={styles.tituloBarra}>
-                    <h1 className={styles.titulo}>SERVIÇOS</h1>
+                    <h2 className={styles.subTitulo}>Suporte na Jornada do Tratamento</h2>
                     <div className={styles.roundedRectangle} />
                 </div>
 
-                <div className={styles.conteinerDir}>
-                    <img src={maoDir} className={styles.maoDir} alt="Logo" />
-                </div>
+                
+            <CardSlider />
+
 
             </div>
         </section>
 
-        
-
-        
-
-        
 
     );
 };
 
-export default Sessao1;
+export default Sessao3;

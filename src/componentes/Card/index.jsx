@@ -1,146 +1,49 @@
-
-import foto from "../../assets/slide1.jpg";
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import styles from "./styles.module.css";
-import { Pagination, Navigation } from 'swiper/modules';
+import slide1 from "../../assets/slide1.jpg";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const Card = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const cards = [
+    { id: 1, name: 'Blanche Pearson', title: 'Sales Manager', img: slide1 },
+    { id: 2, name: 'John Doe', title: 'Developer', img: slide1 },
+    { id: 3, name: 'Jane Smith', title: 'Designer', img: slide1 },
+  ];
 
-  const [swiperRef, setSwiperRef] = useState(null);
+  const cardsToShow = window.innerWidth < 600 ? 1 : 2;
+  const maxIndex = Math.ceil(cards.length / cardsToShow) - 1;
+
+  const nextCard = () => {
+    setCurrentIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : 0));
+  };
+
+  const prevCard = () => {
+    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
+  };
 
   return (
     <div className={styles.body}>
-
-      <div className={styles.slideContainer}>
-        <div className={styles.slideContent}>
-          <div className={styles.slideContainer}>
-            <div className={styles.cardWrapper}>
-              <Swiper
-                onSwiper={setSwiperRef}
-                centeredSlides={false} // Ensure slides are centered
-                spaceBetween={30}
-                loop={true}
-                pagination={{
-                  clickable: true,
-                }}
-                navigation={true} // Ensure navigation is enabled
-                modules={[Pagination, Navigation]}
-                className={styles.mySwiper}
-                breakpoints={{
-                  400: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-
-                  640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                  },
-                  1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                  },
-                  1440: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <div className={styles.card}>
-                    <div className={styles.imageContent}>
-                      <sapn className={styles.overlay}></sapn>
-                      <div className={styles.cardImage}>
-                        <img src={foto} className={styles.cardImg} />
-
-                      </div>
-                    </div>
-                    <div className={styles.cardContent}>
-                      <h2 className={styles.name}>Thiago Moura</h2>
-                      <p className={styles.description}>Olá me chamo thiago moura tenho 30 anos</p>
-                      <button className={styles.button}>View More</button>
-                    </div>
-
-                  </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.card}>
-                    <div className={styles.imageContent}>
-                      <sapn className={styles.overlay}></sapn>
-                      <div className={styles.cardImage}>
-                        <img src={foto} className={styles.cardImg} />
-
-                      </div>
-                    </div>
-                    <div className={styles.cardContent}>
-                      <h2 className={styles.name}>Thiago Moura</h2>
-                      <p className={styles.description}>Olá me chamo thiago moura tenho 30 anos</p>
-                      <button className={styles.button}>View More</button>
-                    </div>
-
-                  </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.card}>
-                    <div className={styles.imageContent}>
-                      <sapn className={styles.overlay}></sapn>
-                      <div className={styles.cardImage}>
-                        <img src={foto} className={styles.cardImg} />
-
-                      </div>
-                    </div>
-                    <div className={styles.cardContent}>
-                      <h2 className={styles.name}>Thiago Moura</h2>
-                      <p className={styles.description}>Olá me chamo thiago moura tenho 30 anos</p>
-                      <button className={styles.button}>View More</button>
-                    </div>
-
-                  </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={styles.card}>
-                    <div className={styles.imageContent}>
-                      <sapn className={styles.overlay}></sapn>
-                      <div className={styles.cardImage}>
-                        <img src={foto} className={styles.cardImg} />
-
-                      </div>
-                    </div>
-                    <div className={styles.cardContent}>
-                      <h2 className={styles.name}>Thiago Moura</h2>
-                      <p className={styles.description}>Olá me chamo thiago moura tenho 30 anos</p>
-                      <button className={styles.button}>View More</button>
-                    </div>
-
-                  </div>
-
-                </SwiperSlide>
-
-              </Swiper>
-
-            </div>
-          </div>
+      <div className={styles.wrapper}>
+        <IoIosArrowBack className={styles.icon} onClick={prevCard} disabled={currentIndex === 0} />
+        
+        <div className={styles.carouselContainer}>
+          <ul className={styles.carousel} style={{ transform: `translateX(-${(currentIndex * (100 / cardsToShow))}%)`, transition: 'transform 0.5s ease' }}>
+            {cards.map((card) => (
+              <li key={card.id} className={styles.card}>
+                <div className={styles.img}><img src={card.img} alt={card.name} /></div>
+                <h2>{card.name}</h2>
+                <span>{card.title}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
 
+        <IoIosArrowForward className={styles.icon} onClick={nextCard} disabled={currentIndex === maxIndex} />
+      </div>
     </div>
   );
-
-
 };
 
 export default Card;

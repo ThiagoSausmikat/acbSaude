@@ -1,112 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .body {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #efefef;
-    padding: 40px;
+    min-height: 100vh;
+    padding: 0 35px;
+    background-color: aquamarine;
 }
 
-.slideContainer {
-    max-width: 1120px;
-    width: 100%;
-}
-
-.slideContent {
-    margin: 0 40px;
-}
-
-.card {
-    width: 320px;
-    border-radius: 25px;
-    background-color: #fff;
-}
-
-.imageContent, .cardContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-}
-
-.imageContent {
+.wrapper {
+    max-width: 600px;
+    width: 80%;
     position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #4070f4;
-    border-radius: 25px 25px 0 25px;
-}
-
-.overlay::before, .overlay::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070f4;
-}
-
-.overlay::after {
-    border-radius: 0 25px 0 0;
-    background-color:   #fff;
-}
-
-.cardImage {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+.wrapper .icon {
+    height: 50px;
+    width: 50px;
     background-color: #fff;
-    padding: 3px;
-}
-
-.cardImage .cardImg {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4070f4;
-}
-
-.name {
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-}
-
-.description {
-    font-size: 14px;
-    color: #707070;
     text-align: center;
-}
-
-.button {
-    border: none;
-    font-size: 16px;
-    color: #fff;
-    padding: 8px 16px;
-    background-color: #4070f4;
-    border-radius: 6px;
-    margin: 14px;
+    line-height: 50px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 1; /* Coloca as setas acima dos cards */
 }
 
-.button:hover {
-background-color: #265df2;
+.wrapper .icon:first-child {
+    left: -35px;
+}
+
+.wrapper .icon:last-child {
+    right: -22px;
+}
+
+.carouselContainer {
+    overflow: hidden; /* Esconde o excesso do carrossel */
+    width: 100%; /* Para manter a largura do carrossel */
+}
+
+.carousel {
+    display: flex; /* Use flexbox para alinhar os cards */
+    transition: transform 0.5s ease; /* Transição suave */
+    width: calc(50 * 3); /* Define a largura total baseada no número total de cards */
+}
+
+.carousel .card {
+    flex: 0 0 calc((100% / 2) - 16px); /* Mostra 2 cards por padrão */
+    height: 342px; /* Altura fixa */
+    list-style: none;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 16px; /* Espaçamento entre os cards */
+}
+
+.card .img {
+    background-color: blueviolet;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 80%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.card span {
+    color: burlywood;
+    font-size: 1.31rem;
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 900px) {
+    .carousel .card {
+        flex: 0 0 calc((100% / 2) - 16px); /* Mantém 2 cards em telas menores */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel .card {
+        flex: 0 0 calc((100% / 1) - 16px); /* Apenas 1 card em telas pequenas */
+    }
 }
