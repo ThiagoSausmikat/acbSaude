@@ -15,25 +15,24 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
-    z-index: 10; /* Garantir que a navbar esteja acima de outros conteúdos */
-    background-color: rgba(9, 75, 89, 1); /* Cor sólida no início */
+    height: 95px;
+    z-index: 10;
+    background-color: rgba(9, 75, 89, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    transition: background-color 0.3s ease-in; /* Transição suave para a cor de fundo */
+    transition: background-color 0.3s ease-in;
 }
 
-/* Quando a página é rolada, a navbar usa uma cor transparente */
 .navbar.scrolled {
-    background-color: rgba(9, 75, 89, 0.8); /* Cor transparente */
+    background-color: rgba(9, 75, 89, 0.8);
 }
 
 .contentLogo {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
     margin-right: 7rem;
     margin-left: 10rem;
     cursor: pointer;
@@ -45,39 +44,50 @@ ul {
 }
 
 .navItem {
-    color: #ffffff;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
     padding: 5px 8px;
     border-radius: 30px;
-    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
-.navbar, .navItem, .contentLogo {
+.navbar,
+.navItem,
+.contentLogo {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
 }
 
-.navItem:hover {
-    background-color: #CDBA72;
-    color: #fff;
-    transform: scale(1.05);
+.link:hover {
+    color: #CDBA72; /* Cor para o link ativo */
 }
 
 .link {
-    color: #fff;
+    color: #fff; /* Cor padrão para links */
     text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.activeLink {
+    color: #CDBA72; /* Cor para o link ativo */
+    
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.activeLink:hover {
+    color: #fff; /* Mantém a cor branca ao passar o mouse sobre o link ativo */
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
     z-index: 10;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     border-radius: 5px;
     padding: 10px;
-    margin-right: 7rem;
+    margin-right: 3rem;
 }
 
 .hamburger div {
@@ -101,7 +111,7 @@ ul {
     position: fixed;
     top: 90px;
     left: 0;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     width: 100%;
     height: 90vh;
     padding: 20px;
@@ -117,10 +127,6 @@ ul {
         width: 100%;
     }
 
-    .nome {
-        margin-right: auto;
-    }
-
     .navMenu {
         display: none;
         flex-direction: column;
@@ -129,7 +135,7 @@ ul {
         position: fixed;
         top: 90px;
         left: -100%;
-        background-color: rgba(0,0,0,.9);
+        background-color: rgba(0, 0, 0, .9);
         height: 90vh;
         transition: .3s;
         padding: 20px;
@@ -146,38 +152,37 @@ ul {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 414px) {
     .navbar {
         padding: 0 10px;
     }
 
     .hamburger {
         display: block;
-        margin-right: 3rem;
+        margin-right: 50rem;
+        background-color:  #CDBA72;
     }
-
-    .nome {
-        margin-right: auto;
-        font-size: 1.5rem;
-        margin-left: 2rem;
-    }
-
-    .navMenu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: fixed;
-        top: 90px;
-        left: -100%;
-        background-color: rgba(0,0,0,.9);
-        height: 90vh;
-        transition: .3s;
-    }
-
     .navMenu.active {
-        display: flex;
-        left: 0;
-        padding-top: 80px;
+        background-color: #094B59;
+        height: 50vh;
+        padding: 50px;
+        gap: 35px;
+    }
+    .link {
+        font-size: 20px;
+    }
+    .activeLink {
+        font-size: 20px;
+    }
+    .contentLogo {
+  
+        margin-right: 7rem;
+        margin-left: 3rem;
+   
+    }
+    
+    .logo {
+        width: 100px;
+        height: auto;
     }
 }

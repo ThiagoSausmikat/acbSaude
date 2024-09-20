@@ -43,7 +43,7 @@
     background-color: #CDBA72;
     border-radius: 20px;
     margin-left: auto; /* Empurra a barra para a direita */
-    padding-right: 200px; /* Espaço extra à esquerda */
+    
 }
 
 .maoEsq, .maoDir {
@@ -56,7 +56,7 @@
 
 .maoEsq {
     left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
-    bottom: 0px;
+    bottom: -30px;
 }
 
 .maoDir {

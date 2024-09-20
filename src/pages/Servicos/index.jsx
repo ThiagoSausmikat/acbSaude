@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./styles.module.css";
 
 import Navbar from '../../componentes/NavBar';
@@ -8,13 +8,19 @@ import banner from '../../assets/servicos.jpg'
 import Sessao1 from '../../componentes/Servicos/Sessao1';
 import Sessao2 from '../../componentes/Servicos/Sessao2';
 import CardNovo from '../../componentes/Card';
+import { useLocation } from 'react-router-dom';
 
 
 
 
 
 const Servicos = () => {
+  const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]); // Rolar para o topo sempre que a localização mudar
+  
   return (
 
     <div className={styles.body} id='inicio'>

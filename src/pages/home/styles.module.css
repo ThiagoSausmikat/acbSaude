@@ -154,3 +154,10 @@
       display: block;
     }
   }
+
+  .vlibras {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999; /* Garante que fique acima de outros elementos */
+  }

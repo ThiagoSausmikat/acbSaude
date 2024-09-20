@@ -1,0 +1,184 @@
+.conteiner {
+    display: flex;
+    height: auto;
+    
+    padding-bottom: 100px;
+    justify-content: center;
+    text-align: center;
+    background-color: #094B59;
+}
+  
+  .contactForm {
+    border-radius: 30px;
+    width: 31.25rem;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Define uma largura máxima */
+    background: #1F1F1F;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .FormDados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .FormDados2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  
+  
+  .formGroup {
+    margin-bottom: 30px;
+  }
+  
+  /* Estilos dos tirulos */
+  .labelText {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+    color: #fff;
+
+
+    padding-left: 25px;
+    /* Adiciona espaço à esquerda do texto */
+  }
+  
+  /* Estilos dos campos de entrada */
+  .inputStyle {
+    width: 23rem;
+    height: 5rem;
+    padding: 10px;
+    border-radius: 80px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 5px solid #CDBA72;
+    background-color: #fff;
+    color: #094B59;
+    
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+
+    padding-left: 25px; /* Adiciona espaço à esquerda do texto */
+  }
+
+  .inputLogradouro {
+    width: 200rem;
+}
+
+textarea {
+    width: 65rem;
+    height: 30rem;
+}
+
+.inputStyle2 {
+    
+    height: 15rem;
+    padding: 10px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 5px solid #CDBA72;
+    background-color: #fff;
+    color: #094B59;
+    
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+
+    padding-left: 25px; /* Adiciona espaço à esquerda do texto */
+  }
+
+
+
+  .button {
+    font-size: 23px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #094B59;
+    background-color: #fff;
+
+    margin-top: 20px;
+}
+  
+  .button:hover {
+    color:#fff;
+    background-color: #CDBA72;
+  }
+
+  .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 80px;
+    font-family: "Poppins", sans-serif;
+}
+
+.subTitulo {
+    font-size: 28px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600; 
+    color: #fff;
+    text-align: left;
+}
+
+.roundedRectangle {
+  width: 80vh;
+  height: 1vh;
+  background-color: #CDBA72;
+  border-radius: 20px;
+
+}
+
+.retangulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+
+
+  @media screen and (max-width: 1385px) {
+    .form {
+        flex-direction: column;
+      }
+    
+      .FormDados {
+        flex-direction: column;
+      }  
+    
+}

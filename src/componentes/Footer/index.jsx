@@ -32,16 +32,23 @@ const Footer = () => {
                 <div className={styles.content}>
                     <h3 className={styles.subTitutlo3}>Contatos</h3>
                     <div className={styles.icon}>
+                    <a className={styles.link} href="https://meu-site-seven-ashen.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className={styles.iconContente} />
+                    </a>
+                    <a className={styles.link} href="https://meu-site-seven-ashen.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp className={styles.iconContente} />
+                    </a>   
+                    <a className={styles.link} href="https://meu-site-seven-ashen.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className={styles.iconContente} />
+                    </a>
                     </div>
+                    
                 </div>
             </div>
 
             <div className={styles.conteinercontent2}>
                 <p className={styles.subTitutlo4}>Copyright@2024 | Todos os direitos reservados a ACB Saúde</p>
-                <a className={styles.link} href="https://www.example.com" target="_blank" rel="noopener noreferrer">By: thiagomouradev.com.br</a>
+                <a className={styles.link} href="https://meu-site-seven-ashen.vercel.app/" target="_blank" rel="noopener noreferrer">By: thiagomouradev.com.br</a>
             </div>
         </section>
 

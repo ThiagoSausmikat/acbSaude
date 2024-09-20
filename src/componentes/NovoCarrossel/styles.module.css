@@ -1,7 +1,7 @@
 .carouselContainer {
   position: relative;
   width: auto; /* Ajusta o carrossel para ocupar 100% da largura do contêiner pai */
-  margin: 0 ;
+  margin:  0;
   padding: 0;
   overflow: hidden; /* Garante que o conteúdo não saia da área visível */
   
@@ -21,7 +21,7 @@
 
 .image {
   width: 100%;
-  height: 100%; /* Ajusta a altura da imagem para preencher o slide */
+  height: 51.5rem; /* Ajusta a altura da imagem para preencher o slide */
   object-fit: cover; /* Ajusta a imagem para cobrir o slide mantendo a proporção */
   display: block; /* Remove qualquer espaço extra abaixo da imagem */
 }
@@ -43,7 +43,7 @@
   text-align: left;
 }
 
-.overlay button {
+.overlay .botao  {
   font-size: 23px;
   padding: 0;
   margin: 0;
@@ -51,10 +51,18 @@
   background-color: #CDBA72;
   color: #fff;
   border: none;
+  text-decoration: none;
   border-radius: 30px;
   cursor: pointer;
   font-family: 'Jost', sans-serif;
   font-weight: 800;
+}
+
+.overlay .botao:hover {
+  
+  background-color: #fff;
+  color:  #094B59;
+ 
 }
 
 .titulo{
