@@ -19,8 +19,8 @@ const Carousel1 = () => {
       title: 'ACB Saúde',
       text: (
         <>
-          Onde o cuidado e a tecnologia se encontram.<br />
-          Nosso programa de suporte ao paciente oferece<br />
+          Onde o cuidado e a tecnologia se encontram.
+          Nosso programa de suporte ao paciente oferece
           cuidado personalizado para o bem-estar de cada paciente.
         </>
       ),

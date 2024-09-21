@@ -13,8 +13,13 @@ const Sessao1 = () => {
     <section className={styles.conteinercontent}>
 
       <div className={styles.content1}>
+           
+        <img src={logo} className={styles.logoTablesSmart} />
+        <div className={styles.tituloRetangulo}>
         <h1 className={styles.titulo}>ACB SAÚDE</h1>
         <div className={styles.roundedRectangle} />
+        </div>
+        
       </div>
 
       <div>

@@ -41,3 +41,76 @@
     font-family: 'Jost', sans-serif;
     font-weight: 600; /* Ajuste conforme necessário */
   }
+
+
+
+  @media screen and (max-width: 1400px) {
+   
+    
+  }
+
+  @media screen and (max-width: 1100px) {
+ 
+    .roundedRectangle {
+      width: 62vh; /* Ajuste com base na viewport width */
+    }
+
+    .titulo {
+      font-size: 40px;
+    }
+
+    .subTitulo {
+      font-size: 33px;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .roundedRectangle {
+      width: 62vh; /* Ajuste com base na viewport width */
+    }
+
+    .titulo {
+      font-size: 30px;
+    }
+
+    .subTitulo {
+      font-size: 25px;
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .roundedRectangle {
+      width: 62vh; /* Ajuste com base na viewport width */
+    }
+
+    .titulo {
+      font-size: 30px;
+    }
+
+    .subTitulo {
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .roundedRectangle {
+      width: 40vh; /* Ajuste com base na viewport width */
+    }
+
+    .titulo {
+      font-size: 18px;
+    }
+
+    .subTitulo {
+      font-size: 16px;
+      margin-left: 5vh;
+      margin-right: 5vh;
+    }
+
+    .diagrama {
+      width: 100%;
+      height: auto;
+  }
+  }
+  

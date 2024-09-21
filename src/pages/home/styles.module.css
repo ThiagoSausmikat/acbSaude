@@ -13,7 +13,7 @@
   background-color: #ffffff;
   align-items: center; /* Alinha verticalmente ao centro */
   justify-content: center;
-  box-shadow: inset 0px 20px 50px rgb(0, 0, 0); /*Sombra*/
+  
 }
 
 .conteinercontent {

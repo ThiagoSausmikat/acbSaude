@@ -134,10 +134,11 @@ const TrabalheConosco = () => {
         <form className={styles.Form} onSubmit={handleSubmit}>
           
           <div className={styles.tituloDados}>
-            <h2 className={styles.subTitulo}>Seus Dados:</h2>
+            <h2 className={styles.subTitulo}>SEUS DADOS:</h2>
           </div>
 
           <div className={styles.FormDados}>
+            <div className={styles.FormDados1}>
             <div>
               <label htmlFor="nomeCompelto">Nome Completo:</label>
               <input
@@ -161,9 +162,10 @@ const TrabalheConosco = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder='Digite o seu email'
-                className={styles.inputStyle}
+                className={styles.inputStyleEmail}
                 required
               />
+            </div>
             </div>
 
             <div >
@@ -179,14 +181,18 @@ const TrabalheConosco = () => {
                 required
               />
             </div>
+            
           </div>
+          
 
           <div className={styles.tituloDados}>
-            <h2 className={styles.subTitulo}>Endereço:</h2>
+            <h2 className={styles.subTitulo}>ENDEREÇO:</h2>
+            
           </div>
 
           <div className={styles.FormEndereco}>
-            <div>
+            <div className={styles.FormEndereco1}>
+              <div>
               <label htmlFor="cep">CEP:</label>
               <input
                 type="text"
@@ -204,21 +210,23 @@ const TrabalheConosco = () => {
             <div>
               <label htmlFor="logradouro">Logradouro:</label>
               <input
-                className={styles.inputLogradouro + styles.inputStyle}
+                className={styles.inputStyleLogradouro}
                 type="text"
                 id="logradouro"
                 name="logradouro"
                 value={logradouro}
                 onChange={(e) => setLogradouro(e.target.value)}
                 placeholder='Digite o seu logradouro'
-                
                 required
-                
               />
             </div>
-          </div>
+
+            </div>
+            </div>
+          
 
           <div className={styles.FormEndereco}>
+            <div className={styles.FormEndereco1}>
             <div>
               <label htmlFor="bairro">Bairro:</label>
               <input
@@ -234,35 +242,6 @@ const TrabalheConosco = () => {
             </div>
 
             <div>
-              <label htmlFor="numero">Número:</label>
-              <input
-                type="text"
-                id="numero"
-                name="numero"
-                value={numero}
-                onChange={(e) => setNumero(e.target.value)}
-                placeholder='Digite o seu numero'
-                className={styles.inputStyle}
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="complemento">Complemento:</label>
-              <input
-                type="text"
-                id="complemento"
-                name="complemento"
-                value={complemento}
-                onChange={(e) => setComplemento(e.target.value)}
-                placeholder='Digite o seu complemento'
-                className={styles.inputStyle}
-              />
-            </div>
-          </div>
-
-          <div className={styles.FormEndereco}>
-            <div>
               <label htmlFor="cidade">Cidade:</label>
               <input
                 type="text"
@@ -271,12 +250,23 @@ const TrabalheConosco = () => {
                 value={cidade}
                 onChange={(e) => setCidade(e.target.value)}
                 placeholder='Digite a sua cidade'
-                className={styles.inputStyle}
+                className={styles.inputStyleCidade}
                 required
               />
             </div>
 
-            <div>
+ 
+
+
+            </div>
+            
+
+
+          </div>
+
+          <div className={styles.FormEndereco}>
+          <div className={styles.FormEndereco1}>
+          <div>
               <label htmlFor="uf">UF:</label>
               <input
                 type="text"
@@ -290,6 +280,34 @@ const TrabalheConosco = () => {
                 required
               />
             </div>
+          <div>
+              <label htmlFor="numero">Número:</label>
+              <input
+                type="text"
+                id="numero"
+                name="numero"
+                value={numero}
+                onChange={(e) => setNumero(e.target.value)}
+                placeholder='Digite o seu numero'
+                className={styles.inputStyleNumero}
+                required
+              />
+            </div>
+            </div>
+          <div>
+              <label htmlFor="complemento">Complemento:</label>
+              <input
+                type="text"
+                id="complemento"
+                name="complemento"
+                value={complemento}
+                onChange={(e) => setComplemento(e.target.value)}
+                placeholder='Digite o seu complemento'
+                className={styles.inputStyle}
+              />
+            </div>
+            
+
           </div>
 
           <button className={styles.button}type="submit" disabled={loading}>

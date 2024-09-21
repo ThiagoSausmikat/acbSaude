@@ -32,7 +32,7 @@ const QuemSomos = () => {
         <img src={banner} className={styles.banner} alt="Logo" />
 
         <div className={styles.contexto}>
-          <Sessao1 />
+          <Sessao1 /> 
           <SessaoCard />
           <Sessao3 />
         </div>

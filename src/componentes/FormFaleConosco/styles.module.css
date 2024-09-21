@@ -171,14 +171,125 @@ textarea {
 }
 
 
+@media screen and (max-width: 1024px) {
+  .conteiner {
+    padding-left: 80px;
+    padding-right: 80px;
+ }
+ 
+   .roundedRectangle {
+     width: 30vh;
+     height: 1vh;
+ }
+ 
+ .FormDados {
+   flex-direction: column;
+   gap: 50px;
+   margin-top: 50px;
+ }
+ 
+ .FormDados2 { /* não mexi em nada ate agora */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+ }
+ 
+ .inputStyle2 {
+     
+   height: 15rem;
+   padding: 10px;
+   border-radius: 40px;
+   box-sizing: border-box;
+   text-align: left;
+   border: 5px solid #CDBA72;
+   background-color: #fff;
+   color: #094B59;
+   
+   font-size: 18px;
+   font-family: 'Jost', sans-serif;
+   font-weight: 450;
+ 
+   padding-left: 25px; /* Adiciona espaço à esquerda do texto */
+ 
+ }
+ 
+ textarea {
+   width: 23rem;
+   height: 30rem;
+ }
+ 
+     
+ .tituloDados {
+ 
+   margin-top: 50px;
+ }
+ 
+ .subTitulo {
+   font-size: 20px;
+ }
+}
 
-  @media screen and (max-width: 1385px) {
-    .form {
-        flex-direction: column;
-      }
+@media screen and (max-width: 414px) {
+   
+  .conteiner {
+   padding-left: 80px;
+   padding-right: 80px;
+}
+
+  .roundedRectangle {
+    width: 30vh;
+    height: 1vh;
+}
+
+.FormDados {
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.FormDados2 { /* não mexi em nada ate agora */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.inputStyle2 {
     
-      .FormDados {
-        flex-direction: column;
-      }  
+  height: 15rem;
+  padding: 10px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 5px solid #CDBA72;
+  background-color: #fff;
+  color: #094B59;
+  
+  font-size: 18px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 450;
+
+  padding-left: 25px; /* Adiciona espaço à esquerda do texto */
+
+}
+
+textarea {
+  width: 23rem;
+  height: 30rem;
+}
+
     
+.tituloDados {
+
+  margin-top: 50px;
+}
+
+.subTitulo {
+  font-size: 20px;
+}
+
+
 }

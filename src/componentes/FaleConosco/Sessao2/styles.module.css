@@ -48,7 +48,7 @@
     z-index: 1; /* Garante que o texto fique acima das barras */
 }
 
-.subTitulo {
+.subTitulo1 {
     font-size: 28px;
     color: #ffffff;
     font-family: 'Jost', sans-serif;
@@ -58,27 +58,29 @@
     padding: 0px 20px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 414px) {
     .textoContainer {
         padding: 0 10px; /* Adiciona espaço nas laterais do texto */
     }
-
     .roundedRectangleEsq {
-        width: 80vh; /* Ajuste com base na viewport width */
-        left: -25vh; /* Ajuste conforme necessário para o efeito */
-        display: none;
+        width: 20vh; /* Ajuste com base na viewport width */
+        left: 0; /* Ajuste conforme necessário para o efeito */  
+        display: block;
     }
-
     .roundedRectangleDir {
-        width: 80vh; /* Ajuste com base na viewport width */
-        right: -25vh; /* Ajuste conforme necessário para o efeito */
-        display: none;
+        width: 20vh; /* Ajuste com base na viewport width */
+        right: 0; /* Ajuste conforme necessário para o efeito */ 
+        display: block;
     }
 
-    .subTitulo {
+    .conteiner {
+        padding-top: 50px;
+    }
+    .subTitulo1 {
         font-size: 20px;
-
+        padding: 0px 5px;
     }
+    
 }
 
 
@@ -233,4 +235,56 @@ input {
     justify-content: center;
     align-items: center;
     margin-top: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+    .textoContainer {
+        padding: 0 10px; /* Adiciona espaço nas laterais do texto */
+    }
+    .roundedRectangleEsq {
+        width: 15vh; /* Ajuste com base na viewport width */
+        left: 0; /* Ajuste conforme necessário para o efeito */  
+        display: block;
+    }
+    .roundedRectangleDir {
+        width: 15vh; /* Ajuste com base na viewport width */
+        right: 0; /* Ajuste conforme necessário para o efeito */ 
+        display: block;
+    }
+    .subTitulo {
+        font-size: 20px;
+        padding: 0px 3px;
+
+    }
+    .conteiner {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    
+}
+
+@media screen and (max-width: 414px) {
+    .textoContainer {
+        padding: 0 10px; /* Adiciona espaço nas laterais do texto */
+    }
+    .roundedRectangleEsq {
+        width: 20vh; /* Ajuste com base na viewport width */
+        left: 0; /* Ajuste conforme necessário para o efeito */  
+        display: block;
+    }
+    .roundedRectangleDir {
+        width: 20vh; /* Ajuste com base na viewport width */
+        right: 0; /* Ajuste conforme necessário para o efeito */ 
+        display: block;
+    }
+    .subTitulo {
+        font-size: 20px;
+        padding: 0px 5px;
+
+    }
+    .conteiner {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    
 }

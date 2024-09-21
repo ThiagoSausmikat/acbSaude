@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Ajusta largura das mãos*/
+    width: 80%;
     height: auto;
 }
 
@@ -71,3 +71,38 @@
     font-weight: 450;
     color: #fff;
 }
+
+@media screen and (max-width: 1024px) {
+    .roundedRectangle {
+        width: 50vh;
+      }
+      .conteiner2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .conteiner1 {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 414px) {
+    .roundedRectangle {
+        width: 20vh;
+      }
+      .conteiner2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .conteiner1 {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .titulo {
+        font-size: 33px;;
+    }     
+    .content {
+        width: 90%;
+    }
+}
+

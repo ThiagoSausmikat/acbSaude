@@ -29,7 +29,9 @@
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5); /* Sombra externa ajustada para baixo */
 }
 
-
-
-
-
+@media screen and (max-width: 414px) {
+  .contexto {
+    padding-top: 50px;
+    
+  }
+}

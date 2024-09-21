@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    box-shadow: inset 0px 20px 50px rgb(0, 0, 0, 0.5); /* Sombra */
 }
 
 .content {
@@ -86,27 +87,47 @@
     }
 }
 
-
-
-
-@keyframes slideIn {
-    to {
-        opacity: 0.3;
-        transform: translateX(0); /* Começa fora da tela à direita */
+@media screen and (max-width: 1024px) {
+    .conteinerEsq, .conteinerDir {
+        height: 40vh;
     }
-    from {
-        opacity: 0;
-        transform: translateX(20vw); /* Move para a posição inicial */
+    .conteinerEsq {
+        margin-top: 30px;
+    }
+
+    .maoEsq, .maoDir {
+        width: 60vw;
+    }
+    .roundedRectangle {
+        width: 25vh;
     }
 }
 
-.maoDir {
-    position: absolute; /* Permite mover a imagem fora do contêiner principal */
-    width: 50vw; /* Tamanho das imagens */
-    height: auto;
-    opacity: 0;
-    z-index: 0; /* Garante que as imagens estejam atrás do conteúdo principal */
-    animation: slideIn 1s forwards;
+@media screen and (max-width: 414px) {
+    .conteinerEsq, .conteinerDir {
+        height: 30vh;
+    }
+    .conteinerEsq {
+        margin-top: 30px;
+    }
 
+    .maoEsq, .maoDir {
+        width: 60vw;
+    }
+    .roundedRectangle {
+        width: 20vh;
+    }
+    .conteinercontent {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .titulo {
+        font-size: 30px;
+    }
+    
 }
+
+
+
+
 
