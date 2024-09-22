@@ -1,4 +1,4 @@
-PAGE EM MANUTENÇÃO
+
 
 import React from 'react';
 
