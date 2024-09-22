@@ -58,6 +58,7 @@
     opacity: 0;
     transform: translateX(300px); /* Para a mão direita */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    
 }
 
 .visible {
@@ -73,7 +74,7 @@
 
 .maoDir {
     right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
-    top: -50px; /* Coloca a mão direita em cima do título */
+    top: -70px; /* Coloca a mão direita em cima do título */
     transform: translateX(300px); /* Inicia fora da tela */
 }
 
@@ -161,6 +162,7 @@
         transform: translateX(-850px);
     }
     .maoDir {
+        top: 5px; /* Coloca a mão esquerda abaixo do título */
         transform: translateX(850px);
     }
     .roundedRectangle {
@@ -172,5 +174,12 @@
     }
     .titulo {
         font-size: 25px;
+    }
+    .hidden {
+        transition: opacity 0.5s ease, transform 0.8s ease;  
+    }
+    
+    .visible {
+        transition: opacity 0.5s ease, transform 0.8s ease;
     }
 }
