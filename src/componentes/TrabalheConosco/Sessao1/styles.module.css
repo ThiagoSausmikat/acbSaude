@@ -1,9 +1,10 @@
+
 .conteinercontent {
     background-color: #094B59;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
-    height: auto; /* Ou use '100vh' para a altura total da tela */
+    
     overflow: hidden;
     position: relative;
     display: flex;
@@ -58,11 +59,15 @@
 .maoEsq {
     left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
     bottom: 0px;
+    transform: translateX(-300px);
+    opacity: 0;
 }
 
 .maoDir {
     right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
     top: 0px;
+    transform: translateX(300px); /* Inicia fora da tela */
+    opacity: 0; /* Inicia invisível */
 }
 
 
@@ -130,31 +135,41 @@
 
 @media screen and (max-width: 414px) {
     .conteinerEsq, .conteinerDir {
-        height: 30vh;
+        height: 25vh;
     }
     .conteinerEsq {
-        margin-top: 30px;
+        margin-top: 50px;
+    }
+    .conteinerDir {
+        margin-bottom: 30px;
+    }
+
+    .maoEsq {
+        left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
+        bottom: 0px;
+        transform: translateX(-850px);
+        opacity: 0;
+    }
+    
+    .maoDir {
+        right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
+        top: 0px;
+        transform: translateX(850px); /* Inicia fora da tela */
+        opacity: 0; /* Inicia invisível */
     }
 
     .maoEsq, .maoDir {
         width: 60vw;
     }
     .roundedRectangle {
-        width: 20vh;
-        margin-left: 0; /* Empurra a barra para a direita */
-        padding-right: 0; /* Espaço extra à esquerda */
+        width: 30vh;
     }
     .conteinercontent {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
     }
     .titulo {
         font-size: 30px;
     }
     
 }
-
-
-
-
-
