@@ -5,14 +5,18 @@ import maoEsq from "../../../assets/maoEsq.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Sessao1 = () => {
+const TrabalheConosco = () => {
     const maoEsqRef = useRef(null);
-    const maoDirRef = useRef(null); // Referência para a mão direita
+    const maoDirRef = useRef(null);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const maosAnimation = gsap.to(maoEsqRef.current, {
+        // Definindo estados iniciais
+        gsap.set(maoEsqRef.current, { x: -300, opacity: 0 });
+        gsap.set(maoDirRef.current, { x: 300, opacity: 0 });
+
+        const trabalheMaoEsqAnimation = gsap.to(maoEsqRef.current, {
             x: 0,
             opacity: 0.3,
             duration: 30,
@@ -23,31 +27,31 @@ const Sessao1 = () => {
                 scrub: 1,
                 markers: true,
                 onLeave: () => gsap.set(maoEsqRef.current, { opacity: 0.3 }),
-                onEnterBack: () => gsap.set(maoEsqRef.current, { opacity: 0.3 }),
-            },
+                onEnterBack: () => gsap.set(maoEsqRef.current, { x: -300, opacity: 0 }),
+            }
         });
 
-        // Animação para a mão direita
-        const maoDirAnimation = gsap.to(maoDirRef.current, {
+        const trabalheMaoDirAnimation = gsap.to(maoDirRef.current, {
             x: 0,
             opacity: 0.3,
             duration: 30,
             scrollTrigger: {
-                trigger: `.${styles.conteinerEsq}`,
+                trigger: `.${styles.conteinerDir}`,
                 start: "top center",
                 end: "bottom center",
                 scrub: 1,
                 markers: true,
                 onLeave: () => gsap.set(maoDirRef.current, { opacity: 0.3 }),
-                onEnterBack: () => gsap.set(maoDirRef.current, { opacity: 0.3 }),
-            },
+                onEnterBack: () => gsap.set(maoDirRef.current, { x: 300, opacity: 0 }),
+            }
         });
 
         return () => {
-            maosAnimation.kill();
-            maoDirAnimation.kill(); // Certifique-se de limpar a animação da mão direita
+            trabalheMaoEsqAnimation.kill();
+            trabalheMaoDirAnimation.kill();
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
-    }, []);
+    }, []); // Executa apenas na montagem
 
     return (
         <section className={styles.conteinercontent}>
@@ -56,7 +60,7 @@ const Sessao1 = () => {
                     <img src={maoEsq} ref={maoEsqRef} className={styles.maoEsq} alt="Mão Esquerda" />
                 </section>
                 <div className={styles.tituloBarra}>
-                    <h1 className={styles.titulo}>TRABALHE NA ACB SAÚDE</h1>
+                    <h1 className={styles.titulo}>TRABALHE CONOSCO</h1>
                     <div className={styles.roundedRectangle} />
                 </div>
                 <div className={styles.conteinerDir}>
@@ -67,4 +71,4 @@ const Sessao1 = () => {
     );
 };
 
-export default Sessao1;
+export default TrabalheConosco;
