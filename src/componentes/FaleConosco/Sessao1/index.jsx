@@ -1,55 +1,43 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from "./styles.module.css";
 import maoDir from "../../../assets/maoDir.png";
 import maoEsq from "../../../assets/maoEsq.png";
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const FaleConosco = () => {
     const maoEsqRef = useRef(null);
     const maoDirRef = useRef(null);
 
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        const maoEsq = maoEsqRef.current;
+        const maoDir = maoDirRef.current;
 
-        // Definindo estados iniciais
-        gsap.set(maoEsqRef.current, { x: -300, opacity: 0 });
-        gsap.set(maoDirRef.current, { x: 300, opacity: 0 });
+        // Resetar estados iniciais
+        maoEsq.style.opacity = '0';
+        maoEsq.style.transform = 'translateX(-300px)';
+        maoDir.style.opacity = '0';
+        maoDir.style.transform = 'translateX(300px)';
 
-        const faleMaoEsqAnimation = gsap.to(maoEsqRef.current, {
-            x: 0,
-            opacity: 0.3,
-            duration: 30,
-            scrollTrigger: {
-                trigger: `.${styles.conteinerEsq}`,
-                start: "top center",
-                end: "bottom center",
-                scrub: 1,
-                markers: true,
-                onLeave: () => gsap.set(maoEsqRef.current, { opacity: 0.3 }),
-                onEnterBack: () => gsap.set(maoEsqRef.current, { x: -300, opacity: 0 }),
-            }
-        });
+        // Função para iniciar a animação
+        const animate = () => {
+            maoEsq.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            maoDir.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
 
-        const faleMaoDirAnimation = gsap.to(maoDirRef.current, {
-            x: 0,
-            opacity: 0.3,
-            duration: 30,
-            scrollTrigger: {
-                trigger: `.${styles.conteinerDir}`,
-                start: "top center",
-                end: "bottom center",
-                scrub: 1,
-                markers: true,
-                onLeave: () => gsap.set(maoDirRef.current, { opacity: 0.3 }),
-                onEnterBack: () => gsap.set(maoDirRef.current, { x: 300, opacity: 0 }),
-            }
-        });
+            requestAnimationFrame(() => {
+                maoEsq.style.opacity = '1';
+                maoEsq.style.transform = 'translateX(0)';
+                maoDir.style.opacity = '1';
+                maoDir.style.transform = 'translateX(0)';
+            });
+        };
+
+        animate();
 
         return () => {
-            faleMaoEsqAnimation.kill();
-            faleMaoDirAnimation.kill();
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            // Resetar antes de sair
+            maoEsq.style.opacity = '0';
+            maoEsq.style.transform = 'translateX(-300px)';
+            maoDir.style.opacity = '0';
+            maoDir.style.transform = 'translateX(300px)';
         };
     }, []); // Executa apenas na montagem
 

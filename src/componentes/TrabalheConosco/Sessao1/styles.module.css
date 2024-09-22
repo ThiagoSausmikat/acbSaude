@@ -1,16 +1,14 @@
-
 .conteinercontent {
     background-color: #094B59;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
-    
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    box-shadow: inset 0px 20px 50px rgb(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: inset 0px 20px 50px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
 .content {
@@ -18,7 +16,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Ajusta largura das mãos*/
+    width: 80%; /* Ajusta largura das mãos */
     height: auto;
     position: relative;
 }
@@ -26,7 +24,7 @@
 .conteinerEsq, .conteinerDir {
     position: relative;
     width: auto;
-    height: 80vh; /* Ajusta altura das mãos junto com o top ou button la em baixo  */
+    height: 80vh; /* Ajusta altura das mãos junto com o top ou button lá embaixo */
 }
 
 .tituloBarra {
@@ -40,36 +38,54 @@
 }
 
 .roundedRectangle {
-    width: 80vh;
+    width: 65vh;
     height: 1vh;
     background-color: #CDBA72;
     border-radius: 20px;
-    margin-left: auto; /* Empurra a barra para a direita */
-    padding-right: 200px; /* Espaço extra à esquerda */
+
 }
 
 .maoEsq, .maoDir {
     position: absolute; /* Permite mover a imagem fora do contêiner principal */
-    width: 50vw; /* tamanho das imagens */
+    width: 50vw; /* Tamanho das imagens */
     height: auto;
     opacity: 0.3;
     z-index: 0; /* Garante que as imagens estejam atrás do conteúdo principal */
+    transition: opacity 1s ease; /* Transição suave para opacidade */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(300px); /* Para a mão direita */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .maoEsq {
     left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
-    bottom: 0px;
-    transform: translateX(-300px);
-    opacity: 0;
+    bottom: -80px; /* Coloca a mão esquerda abaixo do título */
+    transform: translateX(-300px); /* Inicia fora da tela */
 }
 
 .maoDir {
     right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
-    top: 0px;
+    top: -50px; /* Coloca a mão direita em cima do título */
     transform: translateX(300px); /* Inicia fora da tela */
-    opacity: 0; /* Inicia invisível */
 }
 
+.maoDir.visible {
+    transform: translateX(0); /* Animação para entrar da direita */
+    opacity: 0.3;
+}
+
+.maoEsq.visible {
+    transform: translateX(0); /* Animação para entrar da esquerda */
+    opacity: 0.3
+}
 
 .titulo {
     font-size: 50px;
@@ -78,58 +94,55 @@
     color: #fff;
 }
 
-
+/* Media Queries */
 @media screen and (max-width: 1600px) {
     .conteinerEsq, .conteinerDir {
         height: 75vh;
-    }
-
-    .maoEsq, .maoDir {
-        width: 50vw;
     }
     .roundedRectangle {
         width: 105vh;
     }
 }
 
-
 @media screen and (max-width: 1024px) {
     .conteinerEsq, .conteinerDir {
-        height: 40vh;
-    }
-    .conteinerEsq {
-        margin-top: 30px;
-    }
-
-    .maoEsq, .maoDir {
-        width: 60vw;
+        height: 30vh; /* Ajuste na altura para telas menores */
     }
     .roundedRectangle {
-        width: 50vh;
+        width: 43vh;
         margin-left: 0; /* Empurra a barra para a direita */
         padding-right: 0; /* Espaço extra à esquerda */
+    }
+
+    .conteinerEsq {
+        margin-top: -30px;
+    }
+    .conteinerDir {
+        margin-bottom: 80px;
     }
 }
 
 @media screen and (max-width: 820px) {
     .conteinerEsq, .conteinerDir {
-        height: 50vh;
+        height: 30vh; /* Ajuste na altura para telas menores */
     }
     .roundedRectangle {
-        width: 35vh;
-        margin-left: 0; /* Empurra a barra para a direita */
-        padding-right: 0; /* Espaço extra à esquerda */
+        width: 48vh;
+    }
+    .conteinerEsq {
+        margin-top: -30px;
+    }
+    .conteinerDir {
+        margin-bottom: 80px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .conteinerEsq, .conteinerDir {
-        height: 50vh;
+        height: 30vh; /* Ajuste na altura para telas menores */
     }
     .roundedRectangle {
-        width: 40vh;
-        margin-left: 0; /* Empurra a barra para a direita */
-        padding-right: 0; /* Espaço extra à esquerda */
+        width: 55vh;
     }
 }
 
@@ -143,33 +156,21 @@
     .conteinerDir {
         margin-bottom: 30px;
     }
-
     .maoEsq {
-        left: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à esquerda */
-        bottom: 0px;
+        bottom: 5px; /* Coloca a mão esquerda abaixo do título */
         transform: translateX(-850px);
-        opacity: 0;
     }
-    
     .maoDir {
-        right: -20vw; /* Ajuste para posicionar a imagem para fora do contêiner à direita */
-        top: 0px;
-        transform: translateX(850px); /* Inicia fora da tela */
-        opacity: 0; /* Inicia invisível */
-    }
-
-    .maoEsq, .maoDir {
-        width: 60vw;
+        transform: translateX(850px);
     }
     .roundedRectangle {
-        width: 30vh;
+        width: 33vh;
     }
     .conteinercontent {
         padding-top: 50px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
     }
     .titulo {
-        font-size: 30px;
+        font-size: 25px;
     }
-    
 }
