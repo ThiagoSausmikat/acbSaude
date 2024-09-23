@@ -3,60 +3,56 @@ import styles from "./styles.module.css";
 import maoDir from "../../../assets/maoDir.png";
 import maoEsq from "../../../assets/maoEsq.png";
 
-const FaleConosco = () => {
+const Sessao1 = () => {
     const maoEsqRef = useRef(null);
     const maoDirRef = useRef(null);
 
     useEffect(() => {
-        const maoEsq = maoEsqRef.current;
-        const maoDir = maoDirRef.current;
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const width = window.innerWidth;
 
-        // Resetar estados iniciais
-        maoEsq.style.opacity = '0';
-        maoEsq.style.transform = 'translateX(-300px)';
-        maoDir.style.opacity = '0';
-        maoDir.style.transform = 'translateX(300px)';
+            // Definindo os thresholds com base na largura da tela
+            let scrollThreshold;
+            if (width <= 414) {
+                scrollThreshold = 5; // Mobile
+            } else if (width <= 1024) {
+                scrollThreshold = 100; // Para tablets
+            }else if (width <= 1366) {
+                    scrollThreshold = 300; // Para tablets
+            } else {
+                scrollThreshold = 600; // Desktop
+            }
 
-        // Função para iniciar a animação
-        const animate = () => {
-            maoEsq.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            maoDir.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-            requestAnimationFrame(() => {
-                maoEsq.style.opacity = '1';
-                maoEsq.style.transform = 'translateX(0)';
-                maoDir.style.opacity = '1';
-                maoDir.style.transform = 'translateX(0)';
-            });
+            if (scrollY > scrollThreshold) {
+                maoEsqRef.current.classList.add(styles.visible);
+                maoDirRef.current.classList.add(styles.visible);
+            } else {
+                maoEsqRef.current.classList.remove(styles.visible);
+                maoDirRef.current.classList.remove(styles.visible);
+            }
         };
 
-        animate();
-
-        return () => {
-            // Resetar antes de sair
-            maoEsq.style.opacity = '0';
-            maoEsq.style.transform = 'translateX(-300px)';
-            maoDir.style.opacity = '0';
-            maoDir.style.transform = 'translateX(300px)';
-        };
-    }, []); // Executa apenas na montagem
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <section className={styles.conteinercontent}>
             <section className={styles.content}>
                 <section className={styles.conteinerEsq}>
-                    <img src={maoEsq} ref={maoEsqRef} className={styles.maoEsq} alt="Mão Esquerda" />
+                    <img src={maoEsq} ref={maoEsqRef} className={`${styles.maoEsq} ${styles.hidden}`} alt="Mão Esquerda" />
                 </section>
                 <div className={styles.tituloBarra}>
                     <h1 className={styles.titulo}>FALE CONOSCO</h1>
                     <div className={styles.roundedRectangle} />
                 </div>
                 <div className={styles.conteinerDir}>
-                    <img src={maoDir} ref={maoDirRef} className={styles.maoDir} alt="Mão Direita" />
+                    <img src={maoDir} ref={maoDirRef} className={`${styles.maoDir} ${styles.hidden}`} alt="Mão Direita" />
                 </div>
             </section>
         </section>
     );
 };
 
-export default FaleConosco;
+export default Sessao1;

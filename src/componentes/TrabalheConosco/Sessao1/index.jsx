@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import maoDir from "../../../assets/maoDir.png";
 import maoEsq from "../../../assets/maoEsq.png";
 
-const FaleConosco = () => {
+const Sessao1 = () => {
     const maoEsqRef = useRef(null);
     const maoDirRef = useRef(null);
 
@@ -55,4 +55,4 @@ const FaleConosco = () => {
     );
 };
 
-export default FaleConosco;
+export default Sessao1;

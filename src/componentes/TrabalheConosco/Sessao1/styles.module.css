@@ -1,8 +1,8 @@
 .conteinercontent {
     background-color: #094B59;
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -27,6 +27,14 @@
     height: 80vh; /* Ajusta altura das mãos junto com o top ou button lá embaixo */
 }
 
+.conteinerEsq {
+    margin-top: -100px;
+} 
+
+.conteinerDir {
+    margin-bottom: -70px;
+}
+
 .tituloBarra {
     display: flex;
     flex-direction: column;
@@ -38,7 +46,7 @@
 }
 
 .roundedRectangle {
-    width: 65vh;
+    width: 60vh;
     height: 1vh;
     background-color: #CDBA72;
     border-radius: 20px;
@@ -119,7 +127,11 @@
         margin-top: -30px;
     }
     .conteinerDir {
-        margin-bottom: 80px;
+        margin-bottom: -50px;
+    }
+    .conteinercontent {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 }
 
@@ -134,7 +146,11 @@
         margin-top: -30px;
     }
     .conteinerDir {
-        margin-bottom: 80px;
+        margin-bottom: -50px;
+    }
+    .conteinercontent {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 }
 
@@ -144,6 +160,16 @@
     }
     .roundedRectangle {
         width: 55vh;
+    }
+    .conteinerEsq {
+        margin-top: -30px;
+    }
+    .conteinerDir {
+        margin-bottom: -50px;
+    }
+    .conteinercontent {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 }
 
@@ -176,10 +202,10 @@
         font-size: 25px;
     }
     .hidden {
-        transition: opacity 0.5s ease, transform 0.5s ease;  
+        transition: opacity 0.5s ease, transform 2s ease;  
     }
     
     .visible {
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.8s ease;
     }
 }

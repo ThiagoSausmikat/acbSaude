@@ -1,56 +1,70 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from "./styles.module.css";
 
-import maoDir from "../../../assets/maoDir.png"
-import maoEsq from "../../../assets/maoEsq.png"
-
-
 const Sessao2 = () => {
+    const retangulos = [useRef(null), useRef(null), useRef(null), useRef(null)];
+    const [visible, setVisible] = useState(Array(4).fill(false));
+    const thresholds = [250, 500, 750, 1000]; // Exemplos de valores para cada retângulo
+
+    useEffect(() => {
+        const handleScroll = () => {
+            retangulos.forEach((ref, index) => {
+                const rect = ref.current.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (window.scrollY > thresholds[index] && isVisible && !visible[index]) {
+                    setTimeout(() => {
+                        ref.current.classList.add(styles.visible);
+                        setVisible(prev => {
+                            const newVisible = [...prev];
+                            newVisible[index] = true;
+                            return newVisible;
+                        });
+                    }, index * 50); // Delay de 300ms para cada retângulo
+                } else if (window.scrollY < thresholds[index] && !isVisible && visible[index]) {
+                    setTimeout(() => {
+                        ref.current.classList.remove(styles.visible);
+                        setVisible(prev => {
+                            const newVisible = [...prev];
+                            newVisible[index] = false;
+                            return newVisible;
+                        });
+                    }, index * 50); // Delay de 300ms para cada retângulo
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [visible]);
 
     return (
-
         <section className={styles.conteinercontent}>
             <div className={styles.content}>
-                
                 <div className={styles.tituloBarra}>
                     <h1 className={styles.titulo}>Programa de Suporte ao Paciente</h1>
                     <div className={styles.roundedRectangle} />
                 </div>
 
-
                 <div className={styles.conteiner1}>
-                    <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>O Programa de Suporte ao Paciente oferece humanização e cuidado ao fornecer assistência personalizada,
-                            incluindo a aplicação de medicamentos em domicílio e o monitoramento de pacientes. Seu objetivo é melhorar
-                            a adesão ao tratamento e a qualidade de vida, com foco na jornada de tratamento.</p>
+                    <div ref={retangulos[0]} className={`${styles.retangulo1} ${styles.hidden}`}>
+                        <p className={styles.paragrafo}>O Programa de Suporte ao Paciente oferece humanização e cuidado ao fornecer assistência personalizada.</p>
                     </div>
                 </div>
-
 
                 <div className={styles.conteiner2}>
-                    <div className={styles.retangulo}>
+                    <div ref={retangulos[1]} className={`${styles.retangulo2} ${styles.hidden}`}>
                         <p className={styles.paragrafo}>Os PSPs não substituem a consulta com o médico.</p>
                     </div>
-                    <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>Os PSPs não incentivam os profissionais de saúde a prescrever, administrar,
-                            adquirir, fornecer ou recomendar produtos e não devem ser promovidos como um recurso adicional para os
-                            médicos.</p>
+                    <div ref={retangulos[2]} className={`${styles.retangulo3} ${styles.hidden}`}>
+                        <p className={styles.paragrafo}>Os PSPs não incentivam os profissionais de saúde a prescrever ou recomendar produtos.</p>
                     </div>
-                    <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>Os PSPs são elaborados em conformidade com as leis, regulamentos,
-                            códigos e políticas locaisaplicáveis.</p>
+                    <div ref={retangulos[3]} className={`${styles.retangulo4} ${styles.hidden}`}>
+                        <p className={styles.paragrafo}>Os PSPs são elaborados em conformidade com as leis aplicáveis.</p>
                     </div>
                 </div>
-
             </div>
         </section>
-
-        
-
-        
-
-        
-
     );
 };
 
