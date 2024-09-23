@@ -57,13 +57,13 @@
 .hidden {
     opacity: 0;
     transform: translateX(300px); /* Para a mão direita */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.3s ease;
     
 }
 
 .visible {
     opacity: 1;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
 .maoEsq {
@@ -176,10 +176,10 @@
         font-size: 25px;
     }
     .hidden {
-        transition: opacity 0.5s ease, transform 0.8s ease;  
+        transition: opacity 0.5s ease, transform 0.5s ease;  
     }
     
     .visible {
-        transition: opacity 0.5s ease, transform 0.8s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 }

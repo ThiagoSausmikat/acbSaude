@@ -14,10 +14,12 @@ const FaleConosco = () => {
 
             // Definindo os thresholds com base na largura da tela
             let scrollThreshold;
-            if (width <= 768) {
-                scrollThreshold = 20; // Mobile
+            if (width <= 414) {
+                scrollThreshold = 5; // Mobile
             } else if (width <= 1024) {
                 scrollThreshold = 100; // Para tablets
+            }else if (width <= 1366) {
+                    scrollThreshold = 300; // Para tablets
             } else {
                 scrollThreshold = 600; // Desktop
             }
