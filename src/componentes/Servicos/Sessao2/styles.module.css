@@ -178,3 +178,23 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+    .roundedRectangle {
+        width: 28vh;
+      }
+      .conteiner2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .conteiner1 {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .titulo {
+        font-size: 30px;;
+    }     
+    .content {
+        width: 90%;
+    }
+}
+

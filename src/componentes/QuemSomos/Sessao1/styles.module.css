@@ -205,6 +205,37 @@
     }
 
     .roundedRectangle {
+      width: 21vh;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .paragrafo1 {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .titulo {
+      font-size: 30px;
+    }
+
+    .logoTablesSmart {
       width: 20vh;
+      height: auto;
+      margin-bottom: 10px;
+      display: none;
+
+    }
+
+    .content1 {
+      flex-direction: column;
+    }
+
+    .conteinercontent {
+      padding: 0 10px;
+    }
+
+    .roundedRectangle {
+      width: 28vh;
     }
   }

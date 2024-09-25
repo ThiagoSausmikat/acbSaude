@@ -11,7 +11,7 @@ const Sessao2 = () => {
                 <div className={styles.conteinercontent}>
                     <div className={styles.roundedRectangleEsq} />
                     <div className={styles.textoContainer}>
-                        <h2 className={styles.subTitulo1}>
+                        <h2 className={styles.subTitulo}>
                             Estamos a sua disposição para tirar dúvidas, encontrar respostas integradas e simplificar sua vida!
                         </h2>
                     </div>

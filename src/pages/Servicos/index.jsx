@@ -9,6 +9,7 @@ import Sessao1 from '../../componentes/Servicos/Sessao1';
 import Sessao2 from '../../componentes/Servicos/Sessao2';
 import CardNovo from '../../componentes/Card';
 import { useLocation } from 'react-router-dom';
+import Sessao3 from '../../componentes/Servicos/Sessao3';
 
 
 
@@ -40,9 +41,6 @@ const Servicos = () => {
       <CardNovo />
 
 
-  
-
-      
 
       <Footer />
 

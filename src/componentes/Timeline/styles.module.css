@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #094B59;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    font-size: 28px;
+    margin:  32px 0 16px 30px;
+    color: #FFF;
+    font-size: 40px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+}
+
+.subTitulo {
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #B7AD6F;
+}
+
+.paragrafo {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 450;
+    color: #FFF
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+    width: 800px;
+    
+}
+
+.timelineRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .timelineRow {
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+}
+
+
+.timelineRow .timelineColumn {
+    flex: 1 1 320px;
+}
+
+
+.timelineColumn .timelineBox {
+    position: relative;
+    
+    border-left: 2px solid #B7AD6F;
+}
+
+.timelineBox .timelineContent {
+    position: relative;
+    padding-left: 27px;
+}
+
+.timelineBox .timelineContent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10.5px;
+    width: 20px;
+    height: 20px;
+    background-color: #B7AD6F;
+    border-radius: 50%;
+}
+
+.timelineContent .content {
+    padding: 24px;
+    border: 2px solid #B7AD6F;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.timelineColumn {
+    text-align: left;
+    width: 80vh;
+}
+
+
+.animate__animated {
+    animation-duration: 0.3s; /* Duração da animação */
+}
+
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 28px;
+    }
+    
+    .subTitulo {
+        font-size: 22px;
+    }
+    
+    .paragrafo {
+        font-size: 16px;
+    }
+    .timeline {
+        width: 350px;
+    }
+    .timelineColumn{
+        width: 40vh;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .title {
+        font-size: 25px;
+    }
+    
+    .subTitulo {
+        font-size: 22px;
+    }
+    
+    .paragrafo {
+        font-size: 16px;
+    }
+    .timeline {
+        width: 350px;
+    }
+    .timelineColumn{
+        width: 50vh;
+    }
+    
+}
+
+

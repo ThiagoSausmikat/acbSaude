@@ -9,6 +9,7 @@ import SessaoCard from '../../componentes/QuemSomos/Sessao2';
 import Sessao1 from '../../componentes/QuemSomos/Sessao1';
 import Sessao3 from '../../componentes/QuemSomos/Sessao3';
 import { useLocation } from 'react-router-dom';
+import Timeline from '../../componentes/Timeline';
 
 
 
@@ -35,9 +36,11 @@ const QuemSomos = () => {
           <Sessao1 /> 
           <SessaoCard />
           <Sessao3 />
+          
         </div>
-
+        
       </section>
+      <Timeline />
 
       <Footer />
 

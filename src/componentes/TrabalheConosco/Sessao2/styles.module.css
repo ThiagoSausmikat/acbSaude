@@ -108,3 +108,28 @@
     }
     
 }
+
+@media screen and (max-width: 375px) {
+    .textoContainer {
+        padding: 0 10px; /* Adiciona espaço nas laterais do texto */
+    }
+    .roundedRectangleEsq {
+        width: 20vh; /* Ajuste com base na viewport width */
+        left: 0; /* Ajuste conforme necessário para o efeito */  
+        display: block;
+    }
+    .roundedRectangleDir {
+        width: 20vh; /* Ajuste com base na viewport width */
+        right: 0; /* Ajuste conforme necessário para o efeito */ 
+        display: block;
+    }
+    .subTitulo {
+        font-size: 18px;
+        padding: 0px 5px;
+
+    }
+    .conteiner {
+        padding-top: 50px;
+    }
+    
+}

@@ -377,6 +377,7 @@
     color: #094B59;
     font-family: 'Jost', sans-serif;
     font-weight: 800;
+    
   }
 
   .subTitulo {
@@ -385,6 +386,7 @@
     /* Ou use 'start' se você preferir o alinhamento baseado na direção do texto */
     margin-left: 5vh;
     margin-right: 5vh;
+    text-align: left;
   }
 
   .paragrafo1 {
@@ -401,6 +403,92 @@
 
   .roundedRectangle {
     width: 40vh;
+    /* Ajuste com base na viewport width */
+    padding-right: 0;
+    /* Espaço extra à esquerda */
+    margin-left: 0;
+    /* Empurra a barra para a direita */
+
+  }
+
+  .contentImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .coracao {
+    display: none;
+    width: 30vh;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .conteiner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .conteinercontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content1 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .content2 {
+    flex-direction: column;
+    justify-content: center;
+    /* Mantém o alinhamento dos itens no início do contêiner */
+    align-items: center;
+    /* Alinha os itens ao início do contêiner, ou seja, à esquerda */
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .content1 {
+    margin-left: 12vh;
+  }
+
+  .titulo {
+    font-size: 30px;
+    color: #094B59;
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+  }
+
+  .subTitulo {
+    text-align: left;
+  }
+
+  .paragrafo1 {
+    font-size: 16px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+
+  .paragrafo2 {
+    font-size: 16px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+
+  .roundedRectangle {
+    width: 50vh;
     /* Ajuste com base na viewport width */
     padding-right: 0;
     /* Espaço extra à esquerda */

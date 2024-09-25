@@ -1,7 +1,7 @@
 .conteiner {
     display: flex;
     height: auto;
-    
+    padding-top: 100px;
     padding-bottom: 100px;
     justify-content: center;
     text-align: center;
@@ -90,18 +90,14 @@
     padding-left: 25px; /* Adiciona espaço à esquerda do texto */
   }
 
-  .inputLogradouro {
-    width: 200rem;
-}
-
+  
 textarea {
-    width: 65rem;
-    height: 30rem;
+    width: 75rem;
+    height: 15rem;
+    
 }
 
 .inputStyle2 {
-    
-    height: 15rem;
     padding: 10px;
     border-radius: 40px;
     box-sizing: border-box;
@@ -175,6 +171,7 @@ textarea {
   .conteiner {
     padding-left: 80px;
     padding-right: 80px;
+    padding-top: 0;
  }
  
    .roundedRectangle {
@@ -196,28 +193,10 @@ textarea {
    margin-top: 50px;
  }
  
- .inputStyle2 {
-     
-   height: 15rem;
-   padding: 10px;
-   border-radius: 40px;
-   box-sizing: border-box;
-   text-align: left;
-   border: 5px solid #CDBA72;
-   background-color: #fff;
-   color: #094B59;
-   
-   font-size: 18px;
-   font-family: 'Jost', sans-serif;
-   font-weight: 450;
- 
-   padding-left: 25px; /* Adiciona espaço à esquerda do texto */
- 
- }
  
  textarea {
    width: 23rem;
-   height: 30rem;
+   height: 15rem;
  }
  
      
@@ -236,6 +215,7 @@ textarea {
   .conteiner {
    padding-left: 80px;
    padding-right: 80px;
+   padding-top: 0;
 }
 
   .roundedRectangle {
@@ -289,6 +269,44 @@ textarea {
 
 .subTitulo {
   font-size: 20px;
+}
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+ 
+.inputStyle2 {
+    
+  height: 15rem;
+  padding: 10px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 5px solid #CDBA72;
+  background-color: #fff;
+  color: #094B59;
+  
+  font-size: 18px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 450;
+
+  padding-left: 25px; /* Adiciona espaço à esquerda do texto */
+
+}
+
+textarea {
+  width: 20rem;
+  height: 15rem;
+}
+.inputStyle {
+  width: 20rem;
+}
+
+
+.subTitulo {
+  font-size: 18px;
 }
 
 

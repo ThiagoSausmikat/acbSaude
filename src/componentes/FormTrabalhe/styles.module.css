@@ -355,3 +355,94 @@ input {
     }
 
 }
+
+@media screen and (max-width: 375px) {
+    .conteiner {
+        padding-top: 0;
+        padding-bottom: 100px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .subTitulo {
+        font-size: 20px;
+    }
+    
+    .tituloDados {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-top: 50px;
+    }
+    .FormDados {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .FormDados1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .FormEndereco {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        margin-top: 0;
+    }
+    .FormEndereco1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        margin-top: 20px;
+    }
+    .roundedRectangle {
+        width: 30vh;
+        height: 1vh;
+        background-color: #CDBA72;
+        border-radius: 20px;
+    
+    }
+    
+    .retangulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+    }
+
+    .inputStyle {
+        width: 20rem;
+    }
+
+    .inputStyleLogradouro {
+        width: 20rem;
+    }
+    
+    .inputStyleCidade {
+        width: 20rem;
+    }
+    
+    .inputStyleNumero {
+        width: 20rem;
+    }
+    
+    
+    .inputStyleEmail{
+        width: 20rem;
+    }
+
+}

@@ -5,6 +5,8 @@
     flex-direction: column;
     min-height: 95vh;
     padding: 0 35px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #094B59;
 }
 
@@ -108,11 +110,11 @@
     align-items: center;
     width: auto;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .roundedRectangle1 {
-    width: 95vh;
+    width: 90vh;
     height: 1vh;
     background-color: #CDBA72;
     border-radius: 20px;
@@ -231,7 +233,12 @@
         margin-top: 80px;
     }
     .titulo {
-        font-size: 33px;
+        font-size: 30px;
+    }
+    .card h2 {
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin: 30px 0 5px;
     }
     .wrapper .icon {
         /*height: 80px;
@@ -250,6 +257,67 @@
     }
     .wrapper .icon:first-child {
         left: -50px;
+        color: #CDBA72;
+    }
+    
+    .wrapper .icon:last-child {
+        right: -53px;
+        color: #CDBA72;
+        
+    }
+    .wrapper {
+ 
+        padding-left: 15px;
+        
+    }
+    .body {
+        min-height: 85vh;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .carousel .card {
+        flex: 0 0 calc((100% / 1) - 16px); /* Apenas 1 card em telas pequenas */
+    }
+    .tituloBarra {
+
+        width: 100%;
+
+    }
+    .roundedRectangle1 {
+        width: 30vh;
+    }
+    .roundedRectangle2 {
+        width: 30vh;
+        margin-bottom: 50px;
+        margin-top: 80px;
+    }
+    .titulo {
+        font-size: 30px;
+    }
+    .card h2 {
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin: 30px 0 5px;
+    }
+    .wrapper .icon {
+        /*height: 80px;
+        width: 80px;  tive que tirar a fudno
+        background-color: #fff; */
+        text-align: center;
+        line-height: 50px;
+        
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        font-size: 5rem;
+        transform: translateY(-50%);
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7)); /* Sombra suave */
+        z-index: 1; /* Coloca as setas acima dos cards */
+    }
+    .wrapper .icon:first-child {
+        left: -48px;
         color: #CDBA72;
     }
     
