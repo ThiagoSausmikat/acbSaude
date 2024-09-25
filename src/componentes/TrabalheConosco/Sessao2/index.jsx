@@ -12,9 +12,7 @@ const Sessao2 = () => {
                     <div className={styles.roundedRectangleEsq} />
                     <div className={styles.textoContainer}>
                         <h2 className={styles.subTitulo}>
-                            Enfermeiro se você tem paixão em cuidar de pessoas e deseja fazer a diferença na vida dos pacientes que
-                            enfrentam doenças crônicas, trabalhar com atendimento humanizado nessa área pode ser uma escolha
-                            extremamente recompensadora.
+                        Enfermeiro se você tem paixão em cuidar de pessoas e deseja fazer a diferença na vida dos pacientes que enfrentam doenças crônicas. Trabalhar com atendimento humanizado nessa área pode ser uma escolha extremamente recompensadora.
                         </h2>
                     </div>
                     <div className={styles.roundedRectangleDir} />

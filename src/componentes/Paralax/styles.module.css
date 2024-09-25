@@ -24,8 +24,8 @@
     justify-content: center;
     align-items: center;
     min-height: 50vh; /* Ajuste a altura conforme necessário */
-    margin-left: 30vh;
-    margin-right: 30vh;
+    margin-left: 55vh;
+    margin-right: 55vh;
 }
 
 .titulo {
@@ -44,22 +44,24 @@
 }
 
 .paragrafo {
-    font-size: 18px;
+    font-size: 23px;
     color: #fff;
     font-family: 'Jost', sans-serif;
     font-weight: 450; /* Ajuste conforme necessário */
-    
 }
 
 
-@media screen and (max-width: 1400px) {
-
+@media screen and (max-width: 1372px) {
+.content {
+    margin-left: 40vh;
+    margin-right: 40vh;
+}
     
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     .titulo {
-        font-size: 70px;
+        font-size: 50px;
     }
     
     .subTitulo {
@@ -73,8 +75,8 @@
 
     
     .content {
-        margin-left: 8vh;
-        margin-right: 8vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
     }
     
   }

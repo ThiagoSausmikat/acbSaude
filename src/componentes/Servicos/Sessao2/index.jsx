@@ -13,7 +13,7 @@ const Sessao2 = () => {
 
                 <div className={styles.conteiner1}>
                     <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>O Programa de Suporte ao Paciente oferece humanização e cuidado ao fornecer assistência personalizada.</p>
+                        <p className={styles.paragrafo}>O Programa de Suporte ao Paciente oferece humanização e cuidado ao fornecer assistência personalizada, incluindo a aplicação de medicamentos em domicílio e o monitoramento de pacientes. Seu objetivo é melhorar a adesão ao tratamento e a qualidade de vida, com foco na jornada de tratamento.</p>
                     </div>
                 </div>
 
@@ -22,10 +22,10 @@ const Sessao2 = () => {
                         <p className={styles.paragrafo}>Os PSPs não substituem a consulta com o médico.</p>
                     </div>
                     <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>Os PSPs não incentivam os profissionais de saúde a prescrever ou recomendar produtos.</p>
+                        <p className={styles.paragrafo}>Os PSPs não incentivam os profissionais de saúde a prescrever, administrar, adquirir, fornecer ou recomendar produtos.</p>
                     </div>
                     <div className={styles.retangulo}>
-                        <p className={styles.paragrafo}>Os PSPs são elaborados em conformidade com as leis aplicáveis.</p>
+                        <p className={styles.paragrafo}>Os PSPs são elaborados em conformidade com as leis, regulamentos, códigos e políticas locais aplicáveis.</p>
                     </div>
                 </div>
             </div>

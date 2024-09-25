@@ -11,12 +11,9 @@ const ParallaxSection = () => {
         <div id='home' className={styles.parallaxContainer}>
             <Parallax strength={300} blur={{ min: -3, max: 3 }} bgImage={Paralax}>
                 <div className={styles.content}>
-                    <h1 className={styles.titulo}>Sustentabilidade</h1>
-                    <h2 className={styles.subTitulo}>Cuidado que Faz a Diferença</h2>
+                    <h1 className={styles.titulo}>Cuidado que Faz a Diferença</h1>
                     <p className={styles.paragrafo}>
-                        Nosso objetivo é estender o cuidado a todos: desde colaboradores e pacientes até os profissionais de saúde.
-                        Buscamos oferecer soluções completas, eficazes e sustentáveis. Esse é o nosso compromisso com cada vida, de
-                        maneira direta e dedicada.
+                    Nossa essência é estender o cuidado a todos. Oferecendo soluções completas e eficazes. Esse é o nosso compromisso com cada vida, de maneira direta e dedicada.
                     </p>
                 </div>
             </Parallax>

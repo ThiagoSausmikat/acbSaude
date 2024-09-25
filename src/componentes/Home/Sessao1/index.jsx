@@ -26,15 +26,10 @@ const Sessao1 = () => {
           <div className={styles.content2}>
             <div className={styles.roundedRectangle} />
             <p className={styles.paragrafo1}>
-              Nossa missão é levar cuidados personalizados diretamente para a sua casa.
-              Ampliamos o acesso e a adesão à saúde, focando nas necessidades reais dos pacientes.
-              Utilizando tecnologia avançada e um atendimento humanizado, construímos ofertas de valor
-               efetivas que garantem um alto nível de desfecho clínico e um cuidado genuíno.</p>
+            A ACB Saúde se dedica a oferecer um cuidado humanizado e de alta qualidade no ambiente domiciliar, com uma equipe multidisciplinar qualificada e comprometida com o bem-estar e a segurança dos pacientes com abrangência nacional.</p>
             <div className={styles.roundedRectangle} />
             <h2 className={styles.subTitulo}>Transformando Vidas com Cuidado Holístico e Humanizado</h2>
-            <p className={styles.paragrafo2}>Na nossa empresa, oferecemos um cuidado humanizado e holístico,
-              atendendo às necessidades individuais de cada paciente com carinho e atenção. Nosso objetivo é
-              melhorar tanto o bem-estar físico quanto psicológico, fazendo a diferença com um suporte emocional significativo.</p>
+            <p className={styles.paragrafo2}>Na nossa empresa, oferecemos um cuidado humanizado e holístico, atendendo às necessidades individuais de cada paciente. Nosso objetivo é proporcionar qualidade de vida promovendo o bem-estar e adesão ao tratamento</p>
           </div>
         </div>
           </div>

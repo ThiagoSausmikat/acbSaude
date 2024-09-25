@@ -50,8 +50,7 @@ const SessaoCard = () => {
         </div>
         <div className={styles.Content}>
           <h2 className={styles.subTitulo}>VALORES</h2>
-          <p className={styles.paragrafo2}>O paciente no centro do cuidado. Colocamos o paciente como foco principal
-            de todas as nossas ações, personalizando o atendimento de acordo com suas necessidades e promovendo qualidade de vida.</p>
+          <p className={styles.paragrafo2}>Colocamos o paciente no centro do cuidado, sendo foco principal de todas as nossas ações, personalizando o atendimento de acordo com suas necessidades e promovendo qualidade de vida.</p>
         </div>
       </div>
 

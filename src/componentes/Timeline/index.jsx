@@ -13,7 +13,7 @@ const Timeline = () => {
      <section className={styles.timeline}>
         <div className={styles.timelineRow}>
             <div className={styles.timelineColumn}>
-                <h2 className={styles.title}>A Trajetória de Cristiane na Enfermagem</h2>
+                <h2 className={styles.title}>Como Nasceu a ACB Saúde?</h2>
 
                 <div className={styles.timelineBox}>
                     <div className={styles.timelineContent}>

@@ -134,6 +134,16 @@
   background-color: #B7AD6F;
 }
 
+@media screen and (max-width: 1366px) {
+  
+  .overlay {
+ 
+    padding-right: 300px;
+  }  
+  
+  
+}
+
 
 @media screen and (max-width: 1280px) {
    
