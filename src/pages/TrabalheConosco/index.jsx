@@ -7,7 +7,7 @@ import banner from '../../assets/trabalheConosco.jpg'
 import Sessao1 from '../../componentes/TrabalheConosco/Sessao1';
 import Sessao2 from '../../componentes/TrabalheConosco/Sessao2';
 import { useLocation } from 'react-router-dom';
-import Upload from '../../componentes/Upload';
+
 
 
 const TrabalheConosco = () => {

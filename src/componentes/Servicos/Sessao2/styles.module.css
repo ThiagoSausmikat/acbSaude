@@ -7,6 +7,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: #ffffff;
+    
 }
 
 .content {
@@ -79,64 +80,11 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.retangulo1 {
+.retangulo {
     padding: 50px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
     overflow: hidden; /* Para esconder o excesso de texto, se necessário */
-    background-color: #094B59;
-    transform: translateX(-800px); /* Inicia fora da tela */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease, transform 0.5s ease; /* Transição suave */
-}
-
-.retangulo1.visible {
-    transform: translateX(0); /* Animação para entrar da posição original */
-    opacity: 1; /* Fica visível */
-}
-
-.retangulo2 {
-    padding: 50px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Para esconder o excesso de texto, se necessário */
-    background-color: #094B59;
-    transform: translateX(-800px); /* Inicia fora da tela */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease, transform 0.5s ease; /* Transição suave */
-}
-
-.retangulo2.visible {
-    transform: translateX(0); /* Animação para entrar da posição original */
-    opacity: 1; /* Fica visível */
-}
-
-.retangulo3 {
-    padding: 50px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Para esconder o excesso de texto, se necessário */
-    background-color: #094B59;
-    transform: translateX(-800px); /* Inicia fora da tela */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease, transform 0.5s ease; /* Transição suave */
-}
-
-.retangulo3.visible {
-    transform: translateX(0); /* Animação para entrar da posição original */
-    opacity: 1; /* Fica visível */
-}
-
-.retangulo4 {
-    padding: 50px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Para esconder o excesso de texto, se necessário */
-    background-color: #094B59;
-    transform: translateX(-800px); /* Inicia fora da tela */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease, transform 0.5s ease; /* Transição suave */
-}
-
-.retangulo4.visible {
-    transform: translateX(0); /* Animação para entrar da posição original */
-    opacity: 1; /* Fica visível */
+    background-color: #094B59;   
 }
 
 
