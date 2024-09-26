@@ -80,7 +80,7 @@ const TrabalheConosco = () => {
     setLoading(true);
 
     const formData = new FormData(event.target);
-    formData.append('access_key', '89e7fbe1-af8c-449c-9aa9-9fdfb7a0480e'); // Substitua com sua chave de API real
+    formData.append('access_key', '2dd8d521-e7b7-46ed-a5ac-b5a7adbeb7f8'); // Substitua com sua chave de API real
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {

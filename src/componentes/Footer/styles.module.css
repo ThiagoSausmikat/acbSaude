@@ -8,13 +8,13 @@
     align-items: center; /* Alinha verticalmente ao centro */
     justify-content: center;
     box-shadow: inset 0px 20px 50px rgb(0, 0, 0); /*Sombra*/
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .conteinercontent1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: 150px;
     margin-right: 150px;
@@ -29,9 +29,20 @@
     margin-top: 50px;
   }
 
- .content {
-    padding: 50px;
+ .content1 {
+  padding: 20px;
+  width: 60%;
  } 
+
+ .content2 {
+  padding: 20px;
+  width: 50%;
+} 
+
+.content3 {
+  padding: 20px;
+  width: 20%;
+} 
 
   .subTitutlo3 {
     font-size: 20px;
@@ -47,6 +58,7 @@
     color: #fff;
     font-family: 'Jost', sans-serif;
     font-weight: 500; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
   }
 
   .link {
@@ -55,6 +67,16 @@
     color: #fff;
     font-family: 'Jost', sans-serif;
     font-weight: 500; /* Ajuste conforme necessário */
+    text-align: center;
+  }
+
+  .linkTelefone {
+    font-size: 13.5px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500; /* Ajuste conforme necessário */
+    margin-left: 8px;
   }
 
 
@@ -64,7 +86,19 @@
     color: #fff;
     font-family: 'Jost', sans-serif;
     font-weight: 300; /* Ajuste conforme necessário */
+    margin-right: 80px;
+    
   }
+
+  .paragrafo1 {
+    font-size: 15px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300; /* Ajuste conforme necessário */
+    padding-right: 0;
+  }
+
 
 
   .icon {
@@ -87,7 +121,7 @@
   }
   
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1024px) {
   .conteiner {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -109,9 +143,23 @@
     padding: 15px;
  } 
 
+ .content2 {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+} 
+
  .subTitutlo3 {
   font-size: 20px;
   text-align: center;
+}
+
+.subTitutlo4 {
+  margin-bottom: 30px;
 }
 
 .link {
@@ -124,6 +172,21 @@
   margin-left: 120px;
   margin-right: 120px;
 }
+.paragrafo1 {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.icon {
+  display: flex; /* Usa flexbox para alinhar ícones em linha */
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-top: 10px; /* Espaçamento acima dos ícones, opcional */
+  color: #fff;
+  text-align: center;
+}
+
 
 
 }
@@ -146,10 +209,11 @@
     margin-top: 50px;
   }
 
-  .content {
-    padding: 15px;
- } 
-
+  .content1 {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+   } 
  .subTitutlo3 {
   font-size: 20px;
   text-align: center;
@@ -159,7 +223,7 @@
   font-size: 13.5px;
 }
 
-.paragrafo {
+.paragrafo1 {
   font-size: 15px;
   text-align: center;
   margin-left: 30px;
@@ -230,10 +294,11 @@
     margin-top: 50px;
   }
 
-  .content {
-    padding: 15px;
- } 
-
+  .content1 {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+   } 
  .subTitutlo3 {
   font-size: 20px;
   text-align: center;
@@ -244,7 +309,7 @@
   font-size: 13.5px;
 }
 
-.paragrafo {
+.paragrafo1 {
   font-size: 15px;
   text-align: center;
   margin-right: 0;
@@ -254,6 +319,7 @@
 .subTitutlo4 {
   font-size: 12px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 }

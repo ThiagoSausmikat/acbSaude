@@ -27,7 +27,7 @@ const CardNovo = () => {
     <div className={styles.body}>
 
       <div className={styles.tituloBarra}>
-        <h1 className={styles.titulo}>Suporte na Jornada do Tratamento</h1>
+        <h1 className={styles.titulo}>Suporte na jornada do tratamento</h1>
         <div className={styles.roundedRectangle1} />
       </div>
 

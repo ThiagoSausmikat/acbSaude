@@ -10,7 +10,7 @@ const Sessao3 = () => {
             <div className={styles.content}>
                 <h1 className={styles.titulo}>Porque escolher a ACB Saúde?</h1>
                 <div className={styles.roundedRectangle} />
-                <p className={styles.paragrafo}>Escolher a ACB SAUDE significa optar por uma empresa que coloca o paciente no centro das suas ações,
+                <p className={styles.paragrafo}>Escolher a ACB SAÚDE significa optar por uma empresa que coloca o paciente no centro das suas ações,
                     oferecendo um atendimento personalizado, humanizado e de alta qualidade, especialmente para quem precisa de
                     cuidados domiciliares.</p>
                 <div className={styles.roundedRectangle} />

@@ -134,12 +134,33 @@
   background-color: #B7AD6F;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1372px) {
   
   .overlay {
- 
-    padding-right: 300px;
-  }  
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 20%; /* Define uma margem à esquerda */
+    transform: translateY(-50%); /* Ajusta para o centro vertical */
+    
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    /* Remova o max-width se você quiser que a largura se ajuste ao conteúdo */
+    max-width: none; /* Remove o limite de largura */
+    width: auto; /* Ajusta a largura automaticamente */
+    height: auto; /* Ajusta a altura automaticamente */
+    box-sizing: border-box; /* Inclui o padding na largura e altura totais */
+    text-align: left;
+  
+    padding-right: 600px;
+  }
+
+  .image {
+    width: 100%;
+    height: 42rem; /* Ajusta a altura da imagem para preencher o slide */
+    object-fit: cover; /* Ajusta a imagem para cobrir o slide mantendo a proporção */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+  }
   
   
 }
@@ -157,6 +178,8 @@
     height: auto; /* Ajusta a altura da imagem para preencher o slide */
     left: 60px;
   }
+
+  
 
 
   .overlay .botao  {
